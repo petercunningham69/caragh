@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Caragh Gaelic Football Club, Saint Farnan’s Park, Prosperous, Co. Kildare. Fixtures, results, club shop, honours and more.">
+<link rel="icon" href="img/crest.jpg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Caragh GFC</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: maroon crest bands with the white diagonal sash from the logo as the recurring motif; content in a 1180px column */
+:root{
+  --maroon:#74213d; --maroon-deep:#4e1428; --gold:#e8b520; --gold-ink:#7a5a00;
+  --bg:#f7f4f5; --surface:#ffffff; --fg:#22171b; --muted:#6b5a61; --line:#e4dade;
+  --on-maroon:#fff; --chip:#f1e7eb; --win:#1f7a4d; --sash:rgba(255,255,255,.12);
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Manrope","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#150d10; --surface:#21161a; --fg:#f3ecee; --muted:#b5a3aa; --line:#3a2a30;
+  --chip:#33212a; --gold-ink:#f0c94a; --maroon:#8a2a4b; --maroon-deep:#3d1020; --win:#5fd39a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#150d10; --surface:#21161a; --fg:#f3ecee; --muted:#b5a3aa; --line:#3a2a30;
+  --chip:#33212a; --gold-ink:#f0c94a; --maroon:#8a2a4b; --maroon-deep:#3d1020; --win:#5fd39a; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--maroon-deep)}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1;margin:0;letter-spacing:.01em}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;text-transform:uppercase}
+h3{font-size:1.5rem;font-weight:800;text-transform:uppercase}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.section{padding-block:72px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px}
+.sec-head p{margin:.5rem 0 0;color:var(--muted);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:700 .95rem var(--body);text-decoration:none;padding:12px 20px;border-radius:var(--r);background:var(--maroon);color:#fff;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.gold{background:var(--gold);color:#2a1d00}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn:focus-visible,button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.note{font-size:.85rem;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:3px;background:var(--chip);color:var(--fg)}
+.tag.senior{background:var(--maroon);color:#fff}.tag.minor{background:var(--gold);color:#2a1d00}
+
+/* top strip + header */
+.strip{background:var(--maroon-deep);color:#f3dfe6;font-size:.85rem}
+.strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:6px;flex-wrap:wrap}
+.strip a{text-decoration:none;opacity:.9}.strip a:hover{opacity:1;text-decoration:underline}
+.socials{display:flex;gap:14px}
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--maroon);color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.15)}
+header.site .wrap{display:flex;align-items:center;gap:16px;padding-block:8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;margin-right:auto}
+.brand img{width:48px;height:48px;border-radius:50%;background:#fff;padding:2px}
+.brand b{font-family:var(--display);font-weight:900;font-size:1.6rem;text-transform:uppercase;line-height:.9;display:block}
+.brand small{font-size:.72rem;opacity:.8;display:block}
+nav.main{display:flex;gap:2px;flex-wrap:wrap}
+nav.main a{text-decoration:none;font-weight:600;font-size:.92rem;padding:8px 10px;border-radius:4px}
+nav.main a:hover{background:rgba(255,255,255,.12)}
+.cart-btn{position:relative;background:var(--gold);color:#2a1d00;border:0;border-radius:var(--r);padding:9px 14px;font:700 .9rem var(--body);cursor:pointer;display:flex;gap:6px;align-items:center}
+.cart-count{background:var(--maroon-deep);color:#fff;border-radius:99px;min-width:20px;height:20px;font-size:.75rem;display:grid;place-items:center;padding:0 5px}
+.menu-btn{display:none;background:transparent;border:2px solid rgba(255,255,255,.5);color:#fff;border-radius:var(--r);padding:7px 10px;font:700 .9rem var(--body);cursor:pointer}
+@media (max-width:1020px){
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--maroon-deep);flex-direction:column;padding:8px max(16px,env(safe-area-inset-left,0px)) 16px}
+  nav.main.open{display:flex}
+  .menu-btn{display:block}
+}
+
+/* hero */
+.hero{position:relative;background:var(--maroon);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% auto -20% 52%;width:200px;background:var(--sash);transform:rotate(28deg)}
+.hero::after{content:"";position:absolute;inset:-20% auto -20% calc(52% + 230px);width:40px;background:var(--gold);opacity:.85;transform:rotate(28deg)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;padding-block:56px 64px;align-items:center}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:900;text-transform:uppercase;line-height:.88}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .ga{font-size:1.1rem;opacity:.85;margin:.8rem 0 1.6rem;font-style:italic}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-ctas .ghost{color:#fff}
+.crest{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.crest img{width:84px;height:84px;background:#fff;border-radius:50%;padding:4px}
+.next-card{background:var(--surface);color:var(--fg);border-radius:10px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.3);min-width:0}
+.next-card .teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin:14px 0;text-align:center}
+.next-card .teams b{font-family:var(--display);font-size:1.7rem;text-transform:uppercase;font-weight:800;line-height:1}
+.vs{font-family:var(--mono);color:var(--muted);font-size:.8rem}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.countdown div{background:var(--chip);border-radius:var(--r);text-align:center;padding:8px 0}
+.countdown b{display:block;font-family:var(--display);font-size:2rem;font-weight:900;font-variant-numeric:tabular-nums;color:var(--maroon)}
+:root[data-theme="dark"] .countdown b{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .countdown b{color:var(--gold)}}
+.countdown span{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero::before{left:70%}.hero::after{left:calc(70% + 230px)}}
+
+/* quick prompts */
+.prompts{background:var(--surface);border-bottom:1px solid var(--line)}
+.prompts .wrap{display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+.prompts a{display:flex;flex-direction:column;gap:2px;padding:18px 14px;text-decoration:none;border-left:1px solid var(--line)}
+.prompts a:last-child{border-right:1px solid var(--line)}
+.prompts a:hover{background:var(--chip)}
+.prompts b{font-family:var(--display);font-size:1.25rem;text-transform:uppercase;font-weight:800;color:var(--maroon)}
+:root[data-theme="dark"] .prompts b{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .prompts b{color:var(--gold)}}
+.prompts span{font-size:.85rem;color:var(--muted)}
+@media (max-width:900px){.prompts .wrap{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.prompts .wrap{grid-template-columns:repeat(2,1fr)}}
+
+/* tabs */
+.tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin-bottom:20px;flex-wrap:wrap}
+.tabs button{background:none;border:0;font:800 1.3rem var(--display);text-transform:uppercase;color:var(--muted);padding:10px 16px;cursor:pointer;border-bottom:4px solid transparent;margin-bottom:-2px}
+.tabs button[aria-selected="true"]{color:var(--fg);border-color:var(--maroon)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.filters button{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:6px 14px;font:600 .88rem var(--body);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.fix-list{display:grid;gap:10px}
+.fix{display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.fix .date{text-align:center;border-right:1px solid var(--line);padding-right:12px}
+.fix .date b{display:block;font-family:var(--display);font-size:2.1rem;font-weight:900;line-height:1}
+.fix .date span{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;color:var(--muted)}
+.fix h4{margin:0 0 4px;font-size:1.1rem}
+.fix .meta{font-size:.88rem;color:var(--muted)}
+.fix .time{font-family:var(--mono);font-size:.95rem;text-align:right}
+@media (max-width:560px){.fix{grid-template-columns:72px 1fr}.fix .time{grid-column:2;text-align:left}}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.news{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;text-decoration:none}
+.news .thumb{aspect-ratio:16/9;max-width:100%;background:var(--maroon);position:relative;overflow:hidden}
+.news .thumb::after{content:"";position:absolute;top:-30%;bottom:-30%;left:45%;width:28%;background:var(--sash);transform:rotate(28deg)}
+.news .thumb span{position:absolute;left:14px;bottom:10px;color:#fff;font:900 1.6rem var(--display);text-transform:uppercase;z-index:1;line-height:1}
+.news .body{padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.news .body b{font-size:1.05rem;line-height:1.3}
+.news .body p{margin:0;font-size:.9rem;color:var(--muted)}
+
+/* calendar */
+.cal{display:grid;grid-template-columns:1.6fr 1fr;gap:24px}
+.cal-box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;min-width:0}
+.cal-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-top h3{font-size:1.8rem}
+.cal-top button{background:var(--chip);border:0;color:var(--fg);width:38px;height:38px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid .dow{font-family:var(--mono);font-size:.7rem;text-align:center;color:var(--muted);padding:4px 0;text-transform:uppercase}
+.day{aspect-ratio:1;max-width:100%;border-radius:var(--r);border:1px solid transparent;background:var(--bg);display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;padding:6px;font-variant-numeric:tabular-nums;cursor:pointer;color:var(--fg);font:600 .9rem var(--body)}
+.day.empty{background:transparent;cursor:default}
+.day.today{border-color:var(--maroon)}
+.day.sel{background:var(--maroon);color:#fff}
+.dots{display:flex;gap:3px;flex-wrap:wrap}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--maroon)}
+.day.sel .dots i{background:#fff}
+.dots i.minor{background:var(--gold)}.dots i.club{background:var(--muted)}
+.ev-list{display:grid;gap:10px;margin-top:8px}
+.ev{border-left:4px solid var(--maroon);padding:6px 12px;background:var(--bg);border-radius:0 var(--r) var(--r) 0}
+.ev.minor{border-color:var(--gold)}.ev.club{border-color:var(--muted)}
+.ev b{display:block}.ev span{font-size:.85rem;color:var(--muted)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-top:12px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;background:var(--maroon)}
+@media (max-width:820px){.cal{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery-band{background:var(--maroon-deep);color:#fff}
+.gallery-band .eyebrow{color:#e5c1cf}
+.gallery-band .filters button{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.gallery-band .filters button[aria-pressed="true"]{background:var(--gold);color:#2a1d00;border-color:var(--gold)}
+.albums{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.album{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;max-width:100%;background:#2b0b17;cursor:pointer;border:0;padding:0;text-align:left;color:#fff}
+.album canvas{width:100%;height:100%;display:block}
+.album .cap{position:absolute;inset:auto 0 0 0;padding:14px;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.album .cap b{font:900 1.35rem var(--display);text-transform:uppercase;display:block;line-height:1}
+.album .cap span{font-size:.82rem;opacity:.85}
+.album .count{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:.72rem;background:rgba(0,0,0,.5);padding:3px 8px;border-radius:3px}
+.upload-cta{border:2px dashed rgba(255,255,255,.35);border-radius:var(--r);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;aspect-ratio:4/3;max-width:100%;text-align:center;padding:16px;color:#fff;background:transparent;cursor:pointer;font:inherit}
+.upload-cta b{font:900 1.4rem var(--display);text-transform:uppercase}
+
+/* shop */
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.prod .pic{background:var(--chip);aspect-ratio:1;max-width:100%;display:grid;place-items:center;position:relative}
+.prod .pic svg{width:72%;height:72%}
+.prod .badge{position:absolute;top:10px;left:10px}
+.prod .info{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.prod .info b{font-size:1.05rem;line-height:1.25}
+.prod .price{font:900 1.6rem var(--display);font-variant-numeric:tabular-nums}
+.prod .row{display:flex;gap:8px;margin-top:auto}
+.prod select{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:var(--r);padding:8px;font:inherit;font-size:.9rem}
+.prod .add{padding:9px 14px}
+.cat-filter{margin-bottom:18px}
+
+/* drawer */
+.drawer-bg{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:80}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--surface);z-index:90;display:flex;flex-direction:column;padding:calc(18px + env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) 18px;box-shadow:-10px 0 40px rgba(0,0,0,.3)}
+.drawer h3{font-size:2rem}
+.drawer .items{flex:1;overflow:auto;display:grid;gap:10px;align-content:start;margin:14px 0}
+.ci{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px}
+.ci .mini{background:var(--chip);border-radius:var(--r);aspect-ratio:1;display:grid;place-items:center}
+.ci .mini svg{width:80%;height:80%}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+.total{display:flex;justify-content:space-between;font:900 1.6rem var(--display);border-top:2px solid var(--fg);padding-top:10px}
+.close{background:none;border:0;font-size:1.6rem;color:var(--fg);cursor:pointer}
+.confirm{background:var(--chip);border-radius:var(--r);padding:12px;font-size:.92rem}
+
+/* honours */
+.honours-band{background:var(--surface);border-block:1px solid var(--line)}
+.trophy-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+.trophy{border-radius:10px;padding:18px;background:var(--maroon);color:#fff;position:relative;overflow:hidden}
+.trophy::after{content:"";position:absolute;top:-40%;bottom:-40%;right:12%;width:22%;background:var(--sash);transform:rotate(28deg)}
+.trophy b{font:900 3.4rem var(--display);line-height:.9;display:block;color:var(--gold)}
+.trophy span{font-weight:600;position:relative;z-index:1}
+@media (max-width:820px){.trophy-row{grid-template-columns:repeat(2,1fr)}}
+.timeline{position:relative;overflow-x:auto;padding-bottom:8px}
+.tl{position:relative;min-width:900px;height:170px}
+.tl .axis{position:absolute;left:0;right:0;top:85px;height:3px;background:var(--line)}
+.tl .yr{position:absolute;top:92px;font-family:var(--mono);font-size:.7rem;color:var(--muted);transform:translateX(-50%)}
+.tl .pin{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.72rem;text-align:center;width:70px}
+.tl .pin i{width:14px;height:14px;border-radius:50%;background:var(--maroon);border:3px solid var(--surface);box-shadow:0 0 0 2px var(--maroon)}
+.tl .pin.top{bottom:78px}.tl .pin.bot{top:79px;flex-direction:column-reverse}
+.tl .pin.gold i{background:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+.roll{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:28px}
+.roll div{border-top:3px solid var(--maroon);padding-top:10px}
+.roll h4{margin:0 0 6px;font-size:1rem}
+.roll p{margin:0;font-family:var(--mono);font-size:.9rem;color:var(--muted)}
+.feature-win{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:var(--gold);color:#2a1d00;border-radius:10px;padding:20px 24px;margin-top:28px}
+.feature-win b{font:900 3.4rem var(--display);line-height:.9}
+@media (max-width:560px){.feature-win{grid-template-columns:1fr}}
+
+/* club / teams / hub */
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+.two p{max-width:62ch}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.teams-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.team{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;text-decoration:none;display:flex;flex-direction:column;gap:2px}
+.team:hover{border-color:var(--maroon)}
+.team b{font:800 1.2rem var(--display);text-transform:uppercase}
+.team span{font-size:.85rem;color:var(--muted)}
+.hub{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hub a{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:4px}
+.hub a b{font:800 1.25rem var(--display);text-transform:uppercase}
+.hub a span{font-size:.88rem;color:var(--muted)}
+@media (max-width:900px){.hub{grid-template-columns:repeat(2,1fr)}}
+.support{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.support .card{border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.support .draw{background:var(--maroon);color:#fff}
+.support .cc{background:var(--surface);border:1px solid var(--line)}
+.support h3{font-size:2.2rem}
+.support p{margin:0}
+@media (max-width:720px){.support{grid-template-columns:1fr}}
+
+/* sponsors */
+.sponsors{overflow:hidden;border-block:1px solid var(--line);background:var(--surface)}
+.track{display:flex;gap:44px;width:max-content;animation:scroll 60s linear infinite;padding-block:18px}
+.track span{font:800 1.15rem var(--display);text-transform:uppercase;color:var(--muted);white-space:nowrap}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto}html{scroll-behavior:auto}}
+
+/* footer */
+footer{background:var(--maroon-deep);color:#f3dfe6;padding-block:48px 24px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px}
+footer h4{font:800 1.2rem var(--display);text-transform:uppercase;color:#fff;margin:0 0 10px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+footer .base{margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.copy{background:rgba(255,255,255,.12);border:0;color:#fff;border-radius:4px;padding:2px 8px;font-size:.78rem;cursor:pointer;margin-left:6px}
+@media (max-width:820px){footer .cols{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){footer .cols{grid-template-columns:1fr}}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:600;z-index:100}
+/* ---- v2: cleaner, page-based layout ---- */
+body::before{background:var(--surface)}
+header.site{background:var(--surface);color:var(--fg);box-shadow:none;border-bottom:1px solid var(--line)}
+header.site .wrap{padding-block:10px;position:relative}
+.brand{color:var(--fg)}
+.brand img{box-shadow:0 0 0 1px var(--line)}
+.brand b{color:var(--maroon)}
+.brand small{color:var(--muted);opacity:1}
+nav.main{gap:0;flex-wrap:nowrap}
+nav.main a{font-size:.9rem;padding:8px 9px;color:var(--fg);border-radius:4px;white-space:nowrap}
+nav.main a:hover{background:var(--chip)}
+nav.main a.active{color:var(--maroon);box-shadow:inset 0 -3px 0 var(--maroon);border-radius:0}
+.cart-btn{padding:9px 12px}
+.menu-btn{border:1px solid var(--line);color:var(--fg);width:44px;height:40px;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.menu-btn span{display:block;width:18px;height:2px;background:currentColor;border-radius:2px}
+@media (max-width:1160px){
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:6px max(16px,env(safe-area-inset-left,0px)) 14px;box-shadow:0 12px 24px rgba(0,0,0,.08)}
+  nav.main.open{display:flex}
+  nav.main a{padding:12px 8px;font-size:1rem;border-bottom:1px solid var(--line)}
+  nav.main a.active{box-shadow:inset 3px 0 0 var(--maroon);padding-left:14px}
+  .menu-btn{display:flex}
+}
+:root[data-theme="dark"] .brand b, :root[data-theme="dark"] nav.main a.active{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand b,:root:not([data-theme="light"]) nav.main a.active{color:var(--gold)}}
+.eyebrow.light{color:#ecd3dc}
+.center{text-align:center}
+.mono{font-family:var(--mono);font-size:.92rem;word-break:break-all}
+.lede{font-size:1.15rem;opacity:.9;margin:.6rem 0 1.4rem}
+.btn.ghost.light{color:#fff}
+.hero .wrap{padding-block:48px 56px;gap:32px}
+.hero h1{font-size:clamp(3.2rem,9vw,6rem);margin-top:8px}
+.nc-top{display:flex;justify-content:space-between;align-items:center}
+
+/* prompts as a clean card strip */
+.prompts{display:grid;grid-template-columns:repeat(6,1fr);background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-top:-28px;position:relative;z-index:2;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.prompts a{border-left:1px solid var(--line);padding:16px}
+.prompts a:first-child{border-left:0}
+.prompts a:last-child{border-right:0}
+@media (max-width:900px){.prompts{grid-template-columns:repeat(3,1fr)}.prompts a:nth-child(4){border-left:0}.prompts a:nth-child(n+4){border-top:1px solid var(--line)}}
+@media (max-width:520px){.prompts{grid-template-columns:repeat(2,1fr)}.prompts a{border-left:1px solid var(--line)!important;border-top:1px solid var(--line)}.prompts a:nth-child(odd){border-left:0!important}.prompts a:nth-child(-n+2){border-top:0}}
+
+.block{padding-block:44px 0}
+.block-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.block-head h2{font-size:clamp(1.8rem,4vw,2.4rem)}
+.more{font-weight:700;text-decoration:none;color:var(--maroon)}
+.more:hover{text-decoration:underline}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tile{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 48px 20px 20px;text-decoration:none;display:flex;flex-direction:column;gap:4px;transition:border-color .15s,transform .15s}
+.tile:hover{border-color:var(--maroon);transform:translateY(-2px)}
+.tile b{font:800 1.45rem var(--display);text-transform:uppercase}
+.tile span{color:var(--muted);font-size:.92rem}
+.tile i{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-style:normal;font-size:1.3rem;color:var(--maroon)}
+@media (max-width:820px){.tiles{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.tiles{grid-template-columns:1fr}}
+.home-split{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;padding-bottom:64px}
+@media (max-width:900px){.home-split{grid-template-columns:1fr}}
+.news-list{display:grid;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.news-list a{display:block;padding:14px 16px;text-decoration:none;border-top:1px solid var(--line)}
+.news-list a:first-child{border-top:0}
+.news-list a:hover{background:var(--chip)}
+.news-list b{display:block;margin-top:2px}
+
+/* inner pages */
+.page-head{background:var(--maroon);color:#fff;position:relative;overflow:hidden}
+.page-head::before{content:"";position:absolute;top:-60%;bottom:-60%;right:12%;width:120px;background:var(--sash);transform:rotate(28deg)}
+.page-head::after{content:"";position:absolute;top:-60%;bottom:-60%;right:calc(12% - 40px);width:22px;background:var(--gold);opacity:.8;transform:rotate(28deg)}
+.page-head .wrap{position:relative;z-index:1;padding-block:40px 36px}
+.page-head h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:900;text-transform:uppercase;margin-top:8px}
+.page-body{padding-block:36px 72px}
+.page-body > .note,.page-body .note{margin-top:14px}
+.sub{margin:40px 0 14px;font-size:1.6rem}
+.prose p{margin:0 0 1rem}
+.link-list{display:grid;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;align-self:start}
+.link-list a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;text-decoration:none;border-top:1px solid var(--line)}
+.link-list a:first-child{border-top:0}
+.link-list a:hover{background:var(--chip)}
+.link-list a::after{content:"→";color:var(--maroon);font-size:1.1rem}
+.link-list b{font:800 1.2rem var(--display);text-transform:uppercase;margin-right:auto}
+.link-list span{color:var(--muted);font-size:.88rem;text-align:right}
+.link-list.wide{max-width:760px}
+@media (max-width:520px){.link-list span{display:none}}
+.feature-win{margin-top:0}
+.trophy-row{margin-bottom:16px}
+.roll{margin-top:0}
+.shop-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.shop-bar .filters{margin:0}
+.support .card{gap:12px}
+.row-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.support .cc .btn.ghost{color:var(--fg)}
+.teams-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.team{padding:18px;border-radius:10px}
+.team b{font-size:1.4rem}
+.gallery-band{background:none;color:inherit}
+.album{border-radius:10px}
+.upload-cta{border-color:var(--line);color:var(--fg);border-radius:10px}
+.upload-cta span{color:var(--muted)}
+.sponsors{padding-top:18px}
+.sponsors .eyebrow{display:block}
+.track{padding-block:12px 18px}
+footer{padding-block:40px 20px}
+.page{animation:fade .25s ease}
+@keyframes fade{from{opacity:.4}to{opacity:1}}
+
+/* back to top */
+.to-top{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:70;width:52px;height:52px;border-radius:50%;border:0;background:var(--maroon);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25);transition:transform .15s,background .15s}
+.to-top:hover{transform:translateY(-3px);background:var(--maroon-deep)}
+.toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+@media (prefers-reduced-motion:reduce){.page{animation:none}.tile,.to-top{transition:none}}
+
+/* v3: prompts bar at the top of every page */
+.prompt-bar{background:var(--surface);border-bottom:1px solid var(--line)}
+.prompt-bar .prompts{margin-top:0;border:0;border-radius:0;box-shadow:none;background:transparent}
+.prompt-bar .prompts a{padding:12px 14px;border-left:1px solid var(--line)}
+.prompt-bar .prompts a:first-child{border-left:0}
+.prompt-bar .prompts b{font-size:1.1rem}
+.prompt-bar .prompts span{font-size:.8rem}
+.prompt-bar .prompts a.on{background:var(--chip)}
+@media (max-width:900px){.prompt-bar .prompts{display:flex;overflow-x:auto;scrollbar-width:none}
+  .prompt-bar .prompts::-webkit-scrollbar{display:none}
+  .prompt-bar .prompts a{flex:0 0 auto;border-top:0!important;border-left:1px solid var(--line)!important;padding:10px 14px}
+  .prompt-bar .prompts a:first-child{border-left:0!important}}
+.page[data-page="home"] .block:first-child{padding-top:44px}
+
+/* ===== v4: modern refresh ===== */
+:root{--r:12px;--shadow:0 1px 2px rgba(40,10,20,.06),0 10px 30px rgba(40,10,20,.08)}
+body{font-size:16px;letter-spacing:-.005em}
+.btn{border-radius:999px;padding:13px 24px;font-weight:700}
+.btn.ghost{box-shadow:inset 0 0 0 1.5px currentColor}
+/* header: brand + full nav always visible */
+header.site{background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
+header.site .wrap{flex-wrap:wrap;row-gap:6px}
+nav.main{display:flex!important;position:static!important;flex-direction:row!important;gap:4px;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;overflow-x:auto;scrollbar-width:none}
+nav.main::-webkit-scrollbar{display:none}
+nav.main a{border-radius:999px!important;padding:8px 14px!important;font-weight:600;font-size:.88rem!important;border:0!important;box-shadow:none!important}
+nav.main a.active{background:var(--maroon);color:#fff!important}
+@media (max-width:1160px){
+  .brand{order:1}.cart-btn{order:2}
+  nav.main{order:3;width:100%;margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:2px max(16px,env(safe-area-inset-left,0px)) 4px!important;width:calc(100% + 2 * max(16px,env(safe-area-inset-left,0px)))}
+  nav.main a{flex:0 0 auto;background:var(--chip)}
+  nav.main a.active{background:var(--maroon)}
+}
+.cart-btn{border-radius:999px;padding:9px 14px}
+.brand img{width:44px;height:44px}
+/* prompts: pill row */
+.prompt-bar{background:transparent;border-bottom:0}
+.prompt-bar .wrap{padding-block:10px}
+.prompt-bar .prompts{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.prompt-bar .prompts::-webkit-scrollbar{display:none}
+.prompt-bar .prompts a{flex:1 0 auto;border:1px solid var(--line)!important;border-radius:14px;background:var(--surface);padding:10px 16px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+.prompt-bar .prompts a:hover{transform:translateY(-2px);border-color:var(--maroon)!important;background:var(--surface)}
+@media (max-width:900px){.prompt-bar .prompts a{flex:0 0 auto}}
+/* big home hero */
+.hero{margin:0 max(12px,env(safe-area-inset-left,0px));border-radius:28px;background:
+  radial-gradient(120% 90% at 0% 0%,#9b3358 0%,transparent 55%),
+  radial-gradient(90% 80% at 100% 100%,#3a0d1d 0%,transparent 60%),var(--maroon)}
+.hero .wrap{min-height:min(78vh,760px);padding-block:72px 64px;grid-template-columns:1.3fr .9fr;align-items:center}
+.hero h1{font-size:clamp(4rem,13vw,10rem);line-height:.82;letter-spacing:-.01em}
+.hero h1 em{display:block}
+.lede{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:34ch;opacity:.92;margin:1.2rem 0 1.8rem}
+.hero::before{width:260px;left:58%;background:linear-gradient(rgba(255,255,255,.14),rgba(255,255,255,.04))}
+.hero::after{left:calc(58% + 290px);width:46px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,auto);gap:28px;margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18);justify-content:start}
+.hero-stats b{display:block;font:900 clamp(1.8rem,3.4vw,2.8rem) var(--display);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.hero-stats span{font-size:.8rem;opacity:.8}
+.next-card{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:22px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.next-card .eyebrow,.next-card .note,.next-card .vs{color:rgba(255,255,255,.75)}
+.next-card .teams b{font-size:2.2rem}
+.countdown div{background:rgba(255,255,255,.12);border-radius:12px;padding:12px 0}
+.countdown b{color:#fff!important;font-size:2.4rem}
+.countdown span{color:rgba(255,255,255,.7)}
+@media (max-width:820px){.hero{border-radius:20px}.hero .wrap{min-height:0;padding-block:48px}.hero-stats{grid-template-columns:repeat(2,auto);gap:18px 32px}}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1,.hero .lede,.hero-ctas,.hero-stats,.next-card{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero .lede{animation-delay:.08s}.hero-ctas{animation-delay:.14s}.hero-stats{animation-delay:.2s}.next-card{animation-delay:.12s}
+}
+@keyframes rise{from{transform:translateY(14px);opacity:.01}to{transform:none;opacity:1}}
+/* cards everywhere: softer, rounder */
+.tile,.fix,.news-list,.link-list,.cal-box,.prod,.team,.support .card,.album,.upload-cta,.news{border-radius:18px}
+.tile,.fix,.news-list,.link-list,.cal-box,.prod,.team,.support .cc{box-shadow:var(--shadow);border-color:transparent}
+.tile{padding:26px 52px 26px 24px}
+.tile b{font-size:1.6rem}
+.tile i{width:34px;height:34px;border-radius:50%;background:var(--chip);display:grid;place-items:center;font-size:1rem;transition:background .15s,color .15s}
+.tile:hover i{background:var(--maroon);color:#fff}
+.page-head{margin:12px max(12px,env(safe-area-inset-left,0px)) 0;border-radius:24px;background:radial-gradient(100% 120% at 0% 0%,#9b3358 0%,transparent 60%),var(--maroon)}
+.page-head .wrap{padding-block:56px 48px}
+.page-head h1{font-size:clamp(2.6rem,7vw,5rem)}
+.trophy,.feature-win{border-radius:18px}
+.filters button{padding:8px 16px}
+.tabs{border-bottom:0;gap:6px;background:var(--chip);padding:5px;border-radius:999px;display:inline-flex}
+.tabs button{border:0;border-radius:999px;padding:8px 20px;font-size:1.15rem;margin:0}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--fg);box-shadow:var(--shadow)}
+#tab-fix,#tab-res,#tab-news{margin-top:18px}
+.day{border-radius:10px}
+.sponsors{background:transparent;border:0}
+footer{margin:0 max(12px,env(safe-area-inset-left,0px)) 12px;border-radius:24px}
+.to-top{width:54px;height:54px;background:var(--maroon);box-shadow:0 10px 28px rgba(116,33,61,.4)}
+
+/* ===== v5: white light theme, deep maroon dark theme ===== */
+:root{--bg:#ffffff;--surface:#ffffff;--fg:#1f1418;--muted:#6e5b63;--line:#eee3e7;--chip:#f7eff2;--maroon:#74213d;--maroon-deep:#4e1428;--gold-ink:#7a5a00}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#2a0a17;--surface:#3a1221;--fg:#fbf1f4;--muted:#d4b3bf;--line:#56203a;--chip:#4a182c;--maroon:#a3345b;--maroon-deep:#1c0610;--gold-ink:#f0c94a;--sash:rgba(255,255,255,.1);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#2a0a17;--surface:#3a1221;--fg:#fbf1f4;--muted:#d4b3bf;--line:#56203a;--chip:#4a182c;--maroon:#a3345b;--maroon-deep:#1c0610;--gold-ink:#f0c94a;--sash:rgba(255,255,255,.1);color-scheme:dark}
+:root[data-theme="dark"] .hero,:root[data-theme="dark"] .page-head{background:radial-gradient(120% 90% at 0% 0%,#7d2445 0%,transparent 55%),#56162f}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero,:root:not([data-theme="light"]) .page-head{background:radial-gradient(120% 90% at 0% 0%,#7d2445 0%,transparent 55%),#56162f}}
+.theme-btn{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--chip);color:var(--fg);border-radius:999px;padding:8px 14px;font:700 .85rem var(--body);cursor:pointer;transition:background .15s}
+.theme-btn:hover{border-color:var(--maroon)}
+.theme-btn .sun{display:none}
+.is-dark .theme-btn .sun{display:block}.is-dark .theme-btn .moon{display:none}
+@media (max-width:1160px){.theme-btn{order:2;margin-left:auto}.cart-btn{order:2}.brand{margin-right:0}}
+@media (max-width:420px){.tlabel{display:none}.theme-btn{padding:9px 11px}}
+
+/* ===== v6: game ===== */
+.prompt-bar .prompts a.play-chip{background:var(--gold);border-color:var(--gold)!important;color:#2a1d00}
+.prompt-bar .prompts a.play-chip b,.prompt-bar .prompts a.play-chip span{color:#2a1d00!important}
+.game-wrap{max-width:900px;margin:0 auto;display:grid;gap:14px}
+.game-hud{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.game-hud div{background:var(--surface);border-radius:14px;padding:10px 12px;box-shadow:var(--shadow);min-width:0}
+.game-hud b{display:block;font:900 1.6rem var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:560px){.game-hud{grid-template-columns:repeat(3,1fr)}.game-hud div:nth-child(n+4){display:none}}
+.game-stage{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:#5aa0d8}
+.game-stage canvas{display:block;width:100%;aspect-ratio:16/10;max-width:100%;touch-action:manipulation;cursor:pointer}
+.game-msg{position:absolute;left:50%;top:18%;transform:translateX(-50%);font:900 clamp(2rem,7vw,4rem) var(--display);text-transform:uppercase;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.35);pointer-events:none;text-align:center;white-space:nowrap}
+.game-controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.game-controls .note{margin:0;flex:1;min-width:220px}
+
+/* ===== v7: photography ===== */
+.hero::before,.hero::after,.page-head::before,.page-head::after{display:none}
+.hero,:root[data-theme="dark"] .hero{background:linear-gradient(90deg,rgba(46,10,24,.92) 0%,rgba(78,20,40,.72) 45%,rgba(78,20,40,.25) 100%),url(img/minor-match.jpg) center 35%/cover}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(90deg,rgba(46,10,24,.92) 0%,rgba(78,20,40,.72) 45%,rgba(78,20,40,.25) 100%),url(img/minor-match.jpg) center 35%/cover}}
+@media (max-width:820px){.hero,:root[data-theme="dark"] .hero{background:linear-gradient(rgba(46,10,24,.82),rgba(46,10,24,.9)),url(img/minor-match.jpg) center/cover}}
+.page-head,:root[data-theme="dark"] .page-head{background:linear-gradient(90deg,rgba(46,10,24,.9) 0%,rgba(78,20,40,.65) 55%,rgba(78,20,40,.2) 100%),var(--img,none) center var(--pos,40%)/cover,#4e1428}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .page-head{background:linear-gradient(90deg,rgba(46,10,24,.9) 0%,rgba(78,20,40,.65) 55%,rgba(78,20,40,.2) 100%),var(--img,none) center var(--pos,40%)/cover,#4e1428}}
+.page-head .wrap{padding-block:80px 56px}
+.page[data-page="club"]{--img:url(img/boots.jpg)}
+.page[data-page="teams"]{--img:url(img/bibs.jpg)}
+.page[data-page="fixtures"]{--img:url(img/senior-run.jpg);--pos:18%}
+.page[data-page="calendar"]{--img:url(img/balls.jpg)}
+.page[data-page="match-days"]{--img:url(img/high-catch.jpg)}
+.page[data-page="honours"]{--img:url(img/catch-sky.jpg);--pos:15%}
+.page[data-page="shop"]{--img:url(img/jerseys.jpg);--pos:62%}
+.page[data-page="club-hub"]{--img:url(img/cones.jpg)}
+.page[data-page="community"]{--img:url(img/hats.jpg)}
+.page[data-page="support"]{--img:url(img/bottles.jpg)}
+.page[data-page="contact"]{--img:url(img/minor-match.jpg)}
+.page[data-page="game"]{--img:url(img/catch-sky.jpg)}
+/* photo tiles */
+.tile.photo{padding:0;overflow:hidden;gap:0}
+.tile.photo img{width:100%;aspect-ratio:16/10;max-width:100%;object-fit:cover;display:block;transition:transform .4s}
+.tile.photo:hover img{transform:scale(1.04)}
+.tile-text{padding:16px 56px 18px 18px;display:flex;flex-direction:column;gap:2px}
+.tile.photo i{top:auto;bottom:18px;transform:none}
+/* albums */
+.album img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.album:hover img{transform:scale(1.04)}
+/* shop photos */
+.prod .pic.has-photo{display:block}
+.prod .pic img.ph{width:100%;height:100%;object-fit:cover;display:block}
+.ci .mini{overflow:hidden}.ci .mini img.ph{width:100%;height:100%;object-fit:cover}
+/* club side column */
+.side-col{display:grid;gap:16px;align-content:start}
+.side-photo{width:100%;aspect-ratio:4/3;max-width:100%;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
+@media (prefers-reduced-motion:reduce){.tile.photo img,.album img{transition:none}}
+</style>
+</head>
+<body>
+
+
+<header class="site"><div class="wrap">
+  <a class="brand" href="#home"><img src="data:image/jpeg;base64,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" alt="Caragh GFC crest"><span><b>Caragh GFC</b><small>In Union and Liberty</small></span></a>
+  <nav class="main" id="nav" aria-label="Main">
+    <a href="#home" data-nav="home">Home</a>
+    <a href="#club" data-nav="club">Our Club</a>
+    <a href="#teams" data-nav="teams">Teams</a>
+    <a href="#fixtures" data-nav="fixtures">Fixtures</a>
+    <a href="#calendar" data-nav="calendar">Calendar</a>
+    <a href="#match-days" data-nav="match-days">Match Days</a>
+    <a href="#honours" data-nav="honours">Honours</a>
+    <a href="#shop" data-nav="shop">Shop</a>
+    <a href="#support" data-nav="support">Support Us</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" aria-label="Switch to dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="tlabel">Dark</span></button>
+  <button class="cart-btn" id="cartBtn" aria-label="Open basket"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 7h14l-1.5 12h-11z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="cart-count" id="cartCount">0</span></button>
+</div></header>
+<div class="prompt-bar"><div class="wrap">
+<div class="prompts">
+      <a href="https://caraghgfc.com/our-club/membership"><b>Membership</b><span>2026 fees now due</span></a>
+      <a href="https://member.clubspot.app/club/caragh-gfc/fundraisers"><b>50/50 Draw</b><span>A winner every week</span></a>
+      <a href="#support"><b>Club Caragh</b><span>One community</span></a>
+      <a href="#club-hub"><b>Club Hub</b><span>Safeguarding, coaching</span></a>
+      <a href="#community"><b>Hall Rental</b><span>Book the clubhouse</span></a>
+      <a href="#community"><b>Bingo</b><span>Community nights</span></a>
+<a href="#game" class="play-chip"><b>Kick a Point</b><span>Quick GAA game</span></a>
+    </div>
+</div></div>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<div class="page" data-page="home">
+  <section class="hero"><div class="wrap">
+    <div>
+      <span class="eyebrow light">Est. 1888 · Prosperous, Co. Kildare</span>
+      <h1>Caragh <em>GFC</em></h1>
+      <p class="lede">Leinster Intermediate Club Football Champions 2024. Football for every age in Prosperous and Caragh.</p>
+      <div class="hero-ctas">
+        <a class="btn gold" href="#fixtures">Upcoming games</a>
+        <a class="btn ghost light" href="#shop">Club shop</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>1888</b><span>Founded</span></div>
+        <div><b>3</b><span>Kildare senior titles</span></div>
+        <div><b>15</b><span>Major honours</span></div>
+        <div><b>2024</b><span>Leinster champions</span></div>
+      </div>
+    </div>
+    <aside class="next-card" aria-live="polite">
+      <div class="nc-top"><span class="eyebrow">Next game</span><span class="tag" id="nextTag"></span></div>
+      <div class="teams"><b id="nextHome"></b><span class="vs">v</span><b id="nextAway"></b></div>
+      <div class="note center" id="nextMeta"></div>
+      <div class="countdown" id="countdown"></div>
+    </aside>
+  </div></section>
+
+  <div class="wrap">
+
+    <section class="block">
+      <div class="block-head"><h2>Explore the club</h2></div>
+      <div class="tiles">
+        <a class="tile photo" href="#fixtures"><img src="img/senior-run.jpg" alt="" loading="lazy"><div class="tile-text"><b>Fixtures &amp; Results</b><span>Senior, minor, ladies and juvenile games</span></div><i>→</i></a>
+        <a class="tile photo" href="#calendar"><img src="img/balls.jpg" alt="" loading="lazy"><div class="tile-text"><b>Calendar</b><span>Games, draws, bingo and social nights</span></div><i>→</i></a>
+        <a class="tile photo" href="#match-days"><img src="img/high-catch.jpg" alt="" loading="lazy"><div class="tile-text"><b>Match Days</b><span>Photo albums from the sideline</span></div><i>→</i></a>
+        <a class="tile photo" href="#honours"><img src="img/catch-sky.jpg" alt="" loading="lazy"><div class="tile-text"><b>Titles &amp; Cups</b><span>Over a century of silverware</span></div><i>→</i></a>
+        <a class="tile photo" href="#shop"><img src="img/jerseys.jpg" alt="" loading="lazy"><div class="tile-text"><b>Club Shop</b><span>Jerseys, jumpers and tracksuits</span></div><i>→</i></a>
+        <a class="tile photo" href="#teams"><img src="img/bibs.jpg" alt="" loading="lazy"><div class="tile-text"><b>Teams</b><span>Nursery to senior, for every age</span></div><i>→</i></a>
+      </div>
+    </section>
+
+    <div class="home-split">
+      <section class="block">
+        <div class="block-head"><h2>Coming up</h2><a class="more" href="#fixtures">All fixtures →</a></div>
+        <div class="fix-list" id="homeFix"></div>
+      </section>
+      <section class="block">
+        <div class="block-head"><h2>Latest news</h2><a class="more" href="#news">All news →</a></div>
+        <div class="news-list" id="homeNews"></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- ============ OUR CLUB ============ -->
+<div class="page" data-page="club" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Our Club</span><h1>One of Kildare’s oldest clubs</h1></div></div>
+  <div class="wrap page-body">
+    <div class="two">
+      <div class="prose">
+        <p>Caragh GFC plays at Saint Farnan’s Park in Prosperous, and shares a parish with Raheens. By the end of the 1910s Caragh was a real force, winning senior titles in 1918, 1919 and 1926. Larry Stanley captained the 1918 side and went on to win Leinster and All-Ireland honours with Kildare.</p>
+        <p>The 1960s and 70s were lean years, but the club kept going. The 1990s brought the Junior title and Jack Higgins Cup in 1993 and the Intermediate title in 1995, followed by a senior semi-final in 1997. In 2024 the senior men won Kildare and then Leinster.</p>
+        <a class="btn" href="https://caraghgfc.com/our-club/club-history">Read the full club history</a>
+      </div>
+      <div class="side-col"><div class="link-list">
+        <a href="#honours"><b>Club Honours</b><span>Every title and cup</span></a>
+        <a href="https://caraghgfc.com/our-club/club-executive"><b>Club Executive</b><span>Officers and committee</span></a>
+        <a href="https://caraghgfc.com/our-club/membership"><b>Membership</b><span>Join or renew</span></a>
+        <a href="#club-hub"><b>Club Hub</b><span>Safeguarding, policies, coaching</span></a>
+        <a href="#community"><b>Community</b><span>Bingo and hall rental</span></a>
+      </div>
+      <img class="side-photo" src="img/boots.jpg" alt="Muddy football boots and kit bag on the pitch" loading="lazy"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TEAMS ============ -->
+<div class="page" data-page="teams" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Teams</span><h1>Football for every age</h1></div></div>
+  <div class="wrap page-body"><div class="teams-grid" id="teamsGrid"></div></div>
+</div>
+
+<!-- ============ FIXTURES ============ -->
+<div class="page" data-page="fixtures" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Fixtures · Results · News</span><h1>On the field</h1></div></div>
+  <div class="wrap page-body">
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="fix">Fixtures</button>
+      <button role="tab" aria-selected="false" data-tab="res">Results</button>
+      <button role="tab" aria-selected="false" data-tab="news">News</button>
+    </div>
+    <div id="tab-fix">
+      <div class="filters" id="fixFilters"></div>
+      <div class="fix-list" id="fixList"></div>
+      <p class="note">Example fixtures. On the live site these come from the club’s Club &amp; County feed. <a href="https://caraghgfc.com/club-hub/fixtures">Current fixtures</a></p>
+    </div>
+    <div id="tab-res" hidden>
+      <div class="fix-list" id="resList"></div>
+      <p class="note"><a href="https://caraghgfc.com/club-hub/results">Full results on the Club &amp; County feed</a></p>
+    </div>
+    <div id="tab-news" hidden><div class="news-grid" id="newsGrid"></div></div>
+  </div>
+</div>
+
+<!-- ============ CALENDAR ============ -->
+<div class="page" data-page="calendar" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">What’s on</span><h1>Club calendar</h1></div></div>
+  <div class="wrap page-body">
+    <div class="cal">
+      <div class="cal-box">
+        <div class="cal-top"><button id="prevM" aria-label="Previous month">‹</button><h3 id="calTitle"></h3><button id="nextM" aria-label="Next month">›</button></div>
+        <div class="cal-grid" id="calGrid"></div>
+        <div class="legend"><span><i></i>Senior</span><span><i style="background:var(--gold)"></i>Minor &amp; juvenile</span><span><i style="background:var(--muted)"></i>Club &amp; social</span></div>
+      </div>
+      <div class="cal-box">
+        <span class="eyebrow" id="selLabel">Coming up</span>
+        <div class="ev-list" id="evList"></div>
+        <p class="note">Example dates shown.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MATCH DAYS ============ -->
+<div class="page" data-page="match-days" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Photos</span><h1>Match days</h1></div></div>
+  <div class="wrap page-body">
+    <div class="filters" id="galFilters"></div>
+    <div class="albums" id="albums"></div>
+  </div>
+</div>
+
+<!-- ============ HONOURS ============ -->
+<div class="page" data-page="honours" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Roll of honour</span><h1>Titles &amp; cups</h1></div></div>
+  <div class="wrap page-body">
+    <div class="trophy-row">
+      <div class="trophy"><b>1</b><span>Leinster Intermediate Club title</span></div>
+      <div class="trophy"><b>3</b><span>Kildare Senior Championships</span></div>
+      <div class="trophy"><b>3</b><span>Kildare Intermediate Championships</span></div>
+      <div class="trophy"><b>5</b><span>Kildare Junior Championships</span></div>
+    </div>
+    <div class="feature-win">
+      <b>2024</b>
+      <div><strong>Leinster Intermediate Club Football Champions.</strong> After winning the Kildare Intermediate Championship, Caragh became only the seventh Kildare club to win a provincial club title.</div>
+    </div>
+    <h3 class="sub">Timeline</h3>
+    <div class="timeline"><div class="tl" id="tl"></div></div>
+    <h3 class="sub">Full roll of honour</h3>
+    <div class="roll" id="roll"></div>
+  </div>
+</div>
+
+<!-- ============ SHOP ============ -->
+<div class="page" data-page="shop" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Club shop</span><h1>Wear the maroon</h1></div></div>
+  <div class="wrap page-body">
+    <div class="shop-bar"><div class="filters" id="shopFilters"></div><button class="btn" id="cartBtn2">View basket</button></div>
+    <div class="shop-grid" id="shopGrid"></div>
+    <p class="note">Prices are placeholders until the club confirms its kit supplier price list.</p>
+  </div>
+</div>
+
+<!-- ============ CLUB HUB ============ -->
+<div class="page" data-page="club-hub" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Club Hub</span><h1>For players &amp; parents</h1></div></div>
+  <div class="wrap page-body"><div class="link-list wide">
+    <a href="https://caraghgfc.com/club-hub/safeguarding"><b>Safeguarding</b><span>Children’s officer and policies</span></a>
+    <a href="https://caraghgfc.com/club-hub/development"><b>Development</b><span>Plans for the club and grounds</span></a>
+    <a href="https://caraghgfc.com/club-hub/club-policies"><b>Club Policies</b><span>Codes of conduct and rules</span></a>
+    <a href="https://caraghgfc.com/club-hub/coaching"><b>Coaching</b><span>Courses and coach resources</span></a>
+    <a href="https://caraghgfc.com/club-hub/player-injury-fund"><b>Player Injury Fund</b><span>GAA / LGFA cover</span></a>
+    <a href="#fixtures"><b>Fixtures &amp; Results</b><span>All teams</span></a>
+    <a href="#shop"><b>Club Shop</b><span>Kit and leisurewear</span></a>
+  </div></div>
+</div>
+
+<!-- ============ COMMUNITY ============ -->
+<div class="page" data-page="community" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Community</span><h1>At the clubhouse</h1></div></div>
+  <div class="wrap page-body"><div class="support">
+    <div class="card cc"><h3>Bingo</h3><p>Community bingo nights in the clubhouse. Check the calendar for the next one.</p><div class="row-btns"><a class="btn" href="https://caraghgfc.com/community/bingo">Bingo details</a><a class="btn ghost" href="#calendar">Calendar</a></div></div>
+    <div class="card cc"><h3>Hall Rental</h3><p>The clubhouse hall is available for parties, meetings and community groups.</p><div class="row-btns"><a class="btn" href="https://caraghgfc.com/community/hall-rental">Rental details</a><a class="btn ghost" href="#contact">Contact us</a></div></div>
+  </div></div>
+</div>
+
+<!-- ============ SUPPORT ============ -->
+<div class="page" data-page="support" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Support Us</span><h1>Back the club</h1></div></div>
+  <div class="wrap page-body"><div class="support">
+    <div class="card draw"><h3>Weekly 50/50 Draw</h3><p>A winner every single week. Half the pot goes to the winner, half to Caragh GFC.</p><div class="row-btns"><a class="btn gold" href="https://member.clubspot.app/club/caragh-gfc/fundraisers">Enter the draw</a></div></div>
+    <div class="card cc"><h3>Club Caragh</h3><p>One community, all together. How families and local businesses help keep football going in the parish.</p><div class="row-btns"><a class="btn" href="https://caraghgfc.com/support-us/club-caragh-one-community-all-together">Learn more</a></div></div>
+    <div class="card cc"><h3>Membership</h3><p>Every player returning to training and matches needs a current membership.</p><div class="row-btns"><a class="btn" href="https://caraghgfc.com/our-club/membership">Join or renew</a></div></div>
+    <div class="card cc"><h3>Sponsorship</h3><p>Over 20 local businesses support the club. Get in touch to join them.</p><div class="row-btns"><a class="btn" href="#contact">Contact the secretary</a></div></div>
+  </div></div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" data-page="contact" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Contact</span><h1>Get in touch</h1></div></div>
+  <div class="wrap page-body"><div class="support">
+    <div class="card cc"><h3>Find us</h3><p>Saint Farnan’s Park<br>Downings North<br>Prosperous, Co. Kildare<br>W91 WV62</p><div class="row-btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=53.284266821293,-6.76445955">Open in Google Maps</a></div></div>
+    <div class="card cc"><h3>Club secretary</h3><p class="mono">secretary.caragh.kildare@gaa.ie</p><div class="row-btns"><button class="btn" data-copy="secretary.caragh.kildare@gaa.ie">Copy email address</button></div>
+      <p style="margin-top:10px">Follow us on <a href="https://www.facebook.com/CaraghGAA/">Facebook</a>, <a href="https://x.com/caragh_gfc">X</a> and <a href="https://www.instagram.com/caragh_gaa">Instagram</a>.</p></div>
+  </div></div>
+</div>
+
+
+<!-- ============ GAME ============ -->
+<div class="page" data-page="game" hidden>
+  <div class="page-head"><div class="wrap"><span class="eyebrow light">Quick game</span><h1>Kick a point</h1></div></div>
+  <div class="wrap page-body">
+    <div class="game-wrap">
+      <div class="game-hud">
+        <div><span class="eyebrow">Score</span><b id="gScore">0-00</b></div>
+        <div><span class="eyebrow">Kick</span><b id="gKick">1/10</b></div>
+        <div><span class="eyebrow">Distance</span><b id="gDist">21m</b></div>
+        <div><span class="eyebrow">Wind</span><b id="gWind">–</b></div>
+        <div><span class="eyebrow">Best</span><b id="gBest">–</b></div>
+      </div>
+      <div class="game-stage"><canvas id="gameCanvas" aria-label="Free kick game. Press Kick or the space bar to aim, then again to set power."></canvas>
+        <div class="game-msg" id="gMsg"></div></div>
+      <div class="game-controls">
+        <button class="btn gold" id="gBtn">Start</button>
+        <p class="note" id="gHelp">Tap once to lock your aim, tap again to set the power. Over the bar is a point. Under the bar is a goal, if you beat the keeper. 10 kicks.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sponsors" aria-label="Club sponsors"><div class="wrap"><span class="eyebrow">Our sponsors</span></div><div class="track" id="track"></div></div>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h4>Caragh GFC</h4><p>Saint Farnan’s Park, Prosperous<br>Co. Kildare W91 WV62</p></div>
+    <div><h4>Club</h4><ul><li><a href="#club">Our Club</a></li><li><a href="#teams">Teams</a></li><li><a href="#honours">Honours</a></li><li><a href="#club-hub">Club Hub</a></li><li><a href="#community">Community</a></li></ul></div>
+    <div><h4>Games</h4><ul><li><a href="#fixtures">Fixtures</a></li><li><a href="#calendar">Calendar</a></li><li><a href="#match-days">Match Days</a></li><li><a href="#shop">Shop</a></li></ul></div>
+    <div><h4>Useful links</h4><ul><li><a href="https://www.gaa.ie/">GAA</a></li><li><a href="https://kildaregaa.ie/">Kildare GAA</a></li><li><a href="https://ladiesgaelic.ie/">LGFA</a></li><li><a href="https://leinstergaa.ie/">Leinster GAA</a></li><li><a href="https://www.met.ie/">Met Éireann</a></li></ul></div>
+  </div>
+  <div class="base"><span>© 2026 Caragh Gaelic Football Club · Cumann Peile Ghaelach Ceárach</span><span><a href="https://caraghgfc.com/terms-conditions">Terms</a> · <a href="https://caraghgfc.com/privacy-policy">Privacy</a></span></div>
+</div></footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="drawer-bg" id="drawerBg" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="Basket">
+  <div style="display:flex;justify-content:space-between;align-items:center"><h3>Your basket</h3><button class="close" id="closeDrawer" aria-label="Close basket">×</button></div>
+  <div class="items" id="cartItems"></div>
+  <div class="total"><span>Total</span><span id="cartTotal">€0</span></div>
+  <div id="checkoutArea" style="margin-top:12px;display:grid;gap:10px"></div>
+</aside>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const TODAY = new Date(2026,10,10);
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+function toast(t){const el=$("#toast");el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2200)}
+
+/* menu */
+
+
+
+/* ---------- fixtures (example data) ---------- */
+const FIX = [
+  {d:"2026-11-14T11:00",grade:"minor",comp:"Minor A Football League · Rd 6",home:"Caragh",away:"Clane",venue:"St Farnan’s Park"},
+  {d:"2026-11-15T11:30",grade:"senior",comp:"Senior Men · Challenge match",home:"Caragh",away:"Raheens",venue:"St Farnan’s Park"},
+  {d:"2026-11-21T10:30",grade:"juvenile",comp:"U14 Div 2 League",home:"Allenwood",away:"Caragh",venue:"Allenwood"},
+  {d:"2026-11-22T12:00",grade:"ladies",comp:"Senior Ladies · Friendly",home:"Caragh",away:"Kilcock",venue:"St Farnan’s Park"},
+  {d:"2026-11-28T11:00",grade:"minor",comp:"Minor A Football League · Semi-final",home:"Caragh",away:"Naas",venue:"Hawkfield"},
+  {d:"2026-12-05T11:00",grade:"minor",comp:"Minor A Football League · Final",home:"Caragh",away:"TBC",venue:"TBC"},
+  {d:"2027-02-07T11:00",grade:"senior",comp:"Leinster Leader Cup · Rd 1",home:"Caragh",away:"Carbury",venue:"St Farnan’s Park"},
+  {d:"2027-02-21T11:00",grade:"senior",comp:"Leinster Leader Cup · Rd 2",home:"Athy",away:"Caragh",venue:"Geraldine Park"}
+];
+const GRADES={all:"All teams",senior:"Senior",minor:"Minor",ladies:"Ladies",juvenile:"Juvenile"};
+let fixGrade="all";
+function renderFixFilters(){$("#fixFilters").innerHTML=Object.entries(GRADES).map(([k,v])=>`<button aria-pressed="${k===fixGrade}" data-g="${k}">${v}</button>`).join("");
+  $("#fixFilters").querySelectorAll("button").forEach(b=>b.onclick=()=>{fixGrade=b.dataset.g;renderFixFilters();renderFix()})}
+function fixRow(f,result){const dt=new Date(f.d);
+  return `<div class="fix"><div class="date"><b>${dt.getDate()}</b><span>${DOW[dt.getDay()]} ${MON[dt.getMonth()]}</span></div>
+  <div style="min-width:0"><span class="tag ${f.grade}">${GRADES[f.grade]||f.grade}</span><h4 style="margin-top:6px">${esc(f.home)} v ${esc(f.away)}</h4><div class="meta">${esc(f.comp)} · ${esc(f.venue)}</div></div>
+  <div class="time">${result?esc(result):dt.toTimeString().slice(0,5)}</div></div>`}
+function renderFix(){const list=FIX.filter(f=>new Date(f.d)>=TODAY&&(fixGrade==="all"||f.grade===fixGrade));
+  $("#fixList").innerHTML=list.length?list.map(f=>fixRow(f)).join(""):`<p class="note">No ${GRADES[fixGrade].toLowerCase()} games scheduled yet.</p>`}
+const RES=[
+  {d:"2025-09-20T18:00",grade:"senior",comp:"Kildare SFC · Quarter-final",home:"Caragh",away:"Athy",venue:"St Conleth’s Park",r:"Lost"}
+];
+$("#resList").innerHTML=RES.map(f=>fixRow(f,f.r)).join("");
+const NEWS=[
+  {t:"Membership Fees Now Due",d:"30 March 2026",s:"Membership for the 2026 season must be completed before returning to training and matches.",u:"https://caraghgfc.com/news/membership-fees-now-due",k:"Membership"},
+  {t:"New Weekly 50/50 Draw!",d:"26 March 2026",s:"A winner every single week. Caragh GFC launches a new weekly 50/50 draw.",u:"https://caraghgfc.com/news/new-weekly-5050-draw",k:"50/50"},
+  {t:"New Year’s Eve Draw & Awards Night",d:"12 January 2026",s:"Members, supporters and the community gathered in Christy’s for the draw and awards.",u:"https://caraghgfc.com/news/successful-new-years-eve-draw-awards-night-caragh-gfc",k:"Awards"},
+  {t:"New Year’s Eve Draw – Tickets On Sale",d:"12 December 2025",s:"Kick off the new year with a chance to win cash prizes while supporting the club.",u:"https://caraghgfc.com/news/caragh-gfc-new-years-eve-draw-tickets-sale-now",k:"NYE Draw"}
+];
+$("#newsGrid").innerHTML=NEWS.map(n=>`<a class="news" href="${n.u}"><div class="thumb"><span>${esc(n.k)}</span></div><div class="body"><span class="eyebrow">${n.d}</span><b>${esc(n.t)}</b><p>${esc(n.s)}</p></div></a>`).join("");
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+renderFixFilters();renderFix();
+
+/* next game countdown */
+const next=FIX.filter(f=>new Date(f.d)>=TODAY).sort((a,b)=>new Date(a.d)-new Date(b.d))[0];
+$("#nextHome").textContent=next.home;$("#nextAway").textContent=next.away;
+$("#nextTag").textContent=GRADES[next.grade];$("#nextTag").className="tag "+next.grade;
+const nd=new Date(next.d);$("#nextMeta").textContent=`${next.comp} · ${DOW[nd.getDay()]} ${nd.getDate()} ${MON[nd.getMonth()]}, ${next.d.slice(11)} · ${next.venue}`;
+function tick(){let ms=Math.max(0,nd-Date.now());if(Date.now()<TODAY.getTime())ms=nd-TODAY;
+  const d=Math.floor(ms/864e5),h=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60,s=Math.floor(ms/1e3)%60;
+  $("#countdown").innerHTML=[[d,"Days"],[h,"Hrs"],[m,"Mins"],[s,"Secs"]].map(([v,l])=>`<div><b>${String(v).padStart(2,"0")}</b><span>${l}</span></div>`).join("")}
+tick();setInterval(tick,1000);
+
+/* ---------- calendar ---------- */
+const EVENTS=[...FIX.map(f=>({d:f.d.slice(0,10),t:`${f.home} v ${f.away}`,s:`${f.comp} · ${f.d.slice(11)}`,k:f.grade==="senior"||f.grade==="ladies"?"senior":"minor"})),
+  {d:"2026-11-13",t:"Club Bingo",s:"Clubhouse · 8pm",k:"club"},
+  {d:"2026-11-20",t:"Weekly 50/50 Draw",s:"Results posted online",k:"club"},
+  {d:"2026-11-27",t:"Weekly 50/50 Draw",s:"Results posted online",k:"club"},
+  {d:"2026-12-04",t:"Club AGM",s:"Clubhouse · 8pm · all members welcome",k:"club"},
+  {d:"2026-12-11",t:"Christmas Bingo",s:"Clubhouse · 8pm",k:"club"},
+  {d:"2026-12-19",t:"Nursery Christmas party",s:"Clubhouse · 11am",k:"minor"},
+  {d:"2026-12-31",t:"New Year’s Eve Draw",s:"Christy’s · draw at 10pm",k:"club"},
+  {d:"2027-01-09",t:"Senior pre-season training",s:"St Farnan’s Park · 10am",k:"senior"},
+  {d:"2027-01-16",t:"Awards night",s:"Players of the year 2026",k:"club"},
+  {d:"2027-01-24",t:"Juvenile registration day",s:"Clubhouse · 11am–1pm",k:"minor"}];
+let calY=TODAY.getFullYear(),calM=TODAY.getMonth(),selDay=null;
+const iso=(y,m,d)=>`${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+function renderCal(){$("#calTitle").textContent=`${MONTHS[calM]} ${calY}`;
+  const first=new Date(calY,calM,1),offset=(first.getDay()+6)%7,days=new Date(calY,calM+1,0).getDate();
+  let h=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d=>`<div class="dow">${d}</div>`).join("");
+  for(let i=0;i<offset;i++)h+=`<div class="day empty"></div>`;
+  for(let d=1;d<=days;d++){const k=iso(calY,calM,d),evs=EVENTS.filter(e=>e.d===k);
+    const cls=["day",k===iso(TODAY.getFullYear(),TODAY.getMonth(),TODAY.getDate())?"today":"",k===selDay?"sel":""].join(" ");
+    h+=`<button class="${cls}" data-d="${k}" aria-label="${d} ${MONTHS[calM]}${evs.length?`, ${evs.length} event${evs.length>1?"s":""}`:""}"><span>${d}</span><span class="dots">${evs.map(e=>`<i class="${e.k}"></i>`).join("")}</span></button>`}
+  $("#calGrid").innerHTML=h;
+  $("#calGrid").querySelectorAll("button.day").forEach(b=>b.onclick=()=>{selDay=selDay===b.dataset.d?null:b.dataset.d;renderCal()});
+  renderEvList()}
+function renderEvList(){let evs,label;
+  if(selDay){evs=EVENTS.filter(e=>e.d===selDay);const dt=new Date(selDay);label=`${DOW[dt.getDay()]} ${dt.getDate()} ${MONTHS[dt.getMonth()]}`}
+  else{evs=EVENTS.filter(e=>new Date(e.d)>=TODAY).sort((a,b)=>a.d.localeCompare(b.d)).slice(0,6);label="Coming up"}
+  $("#selLabel").textContent=label;
+  $("#evList").innerHTML=evs.length?evs.map(e=>{const dt=new Date(e.d);return `<div class="ev ${e.k}"><b>${esc(e.t)}</b><span>${selDay?"":DOW[dt.getDay()]+" "+dt.getDate()+" "+MON[dt.getMonth()]+" · "}${esc(e.s)}</span></div>`}).join(""):`<p class="note">Nothing on this day.</p>`}
+$("#prevM").onclick=()=>{calM--;if(calM<0){calM=11;calY--}selDay=null;renderCal()};
+$("#nextM").onclick=()=>{calM++;if(calM>11){calM=0;calY++}selDay=null;renderCal()};
+renderCal();
+
+/* ---------- gallery ---------- */
+const ALBUMS=[
+  {t:"Leinster Final 2024",c:"senior",s:"Leinster Intermediate Champions",n:64,img:"catch-sky"},
+  {t:"Kildare IFC Final 2024",c:"senior",s:"County champions again",n:48,img:"high-catch"},
+  {t:"SFC v Athy 2025",c:"senior",s:"Quarter-final, St Conleth’s Park",n:36,img:"senior-run"},
+  {t:"Minor League 2026",c:"minor",s:"Minor A league campaign",n:28,img:"minor-match"},
+  {t:"Training Nights",c:"juvenile",s:"Drills and skills at St Farnan’s",n:40,img:"cones"},
+  {t:"Senior Ladies 2026",c:"ladies",s:"Season highlights",n:22,img:"bibs"},
+  {t:"Match Day Kit",c:"social",s:"Behind the scenes on the sideline",n:18,img:"bottles"},
+  {t:"Supporters’ Day",c:"social",s:"Hats, scarves and the home crowd",n:31,img:"hats"}
+];
+const GCATS={all:"All albums",senior:"Senior",minor:"Minor",ladies:"Ladies",juvenile:"Juvenile",social:"Social nights"};
+let galCat="all";
+function renderGal(){$("#galFilters").innerHTML=Object.entries(GCATS).map(([k,v])=>`<button aria-pressed="${k===galCat}" data-c="${k}">${v}</button>`).join("");
+  $("#galFilters").querySelectorAll("button").forEach(b=>b.onclick=()=>{galCat=b.dataset.c;renderGal()});
+  const list=ALBUMS.filter(a=>galCat==="all"||a.c===galCat);
+  $("#albums").innerHTML=list.map(a=>`<button class="album" aria-label="Open album ${esc(a.t)}"><img src="img/${a.img}.jpg" alt="" loading="lazy"><span class="count">${a.n} photos</span><div class="cap"><b>${esc(a.t)}</b><span>${esc(a.s)}</span></div></button>`).join("")
+   +`<button class="upload-cta" id="upCta"><b>Add your photos</b><span>Club members can send in match day pictures for the next album.</span></button>`;
+  
+  document.querySelectorAll(".album").forEach(b=>b.onclick=()=>toast("Albums open once photos are uploaded"));
+  $("#upCta").onclick=()=>toast("Photo uploads go live with the new site")}
+function drawCover(cv){const s=+cv.dataset.seed,x=cv.getContext("2d"),W=cv.width,H=cv.height;
+  let r=s*9301;const rnd=()=>(r=(r*9301+49297)%233280)/233280;
+  const g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,"#5a1830");g.addColorStop(1,"#2a0a15");x.fillStyle=g;x.fillRect(0,0,W,H);
+  x.fillStyle="#3c6b2f";x.fillRect(0,H*.62,W,H*.38);// pitch
+  x.strokeStyle="rgba(255,255,255,.35)";x.lineWidth=2;x.beginPath();x.moveTo(0,H*.8);x.lineTo(W,H*.74);x.stroke();
+  // goalposts
+  const gx=W*(.55+rnd()*.3);x.strokeStyle="#fff";x.lineWidth=3;x.beginPath();x.moveTo(gx,H*.64);x.lineTo(gx,H*.12);x.moveTo(gx+44,H*.64);x.lineTo(gx+44,H*.12);x.moveTo(gx,H*.5);x.lineTo(gx+44,H*.5);x.stroke();
+  // players
+  for(let i=0;i<5+Math.floor(rnd()*4);i++){const px=rnd()*W,py=H*(.62+rnd()*.25),sc=.7+rnd()*.6,maroon=rnd()>.45;
+    x.fillStyle=maroon?"#8a2a4b":"#e9e9e9";x.fillRect(px-7*sc,py-30*sc,14*sc,16*sc);
+    x.fillStyle="#fff";x.fillRect(px-7*sc,py-14*sc,14*sc,6*sc);x.fillStyle="#1a1a1a";x.fillRect(px-5*sc,py-8*sc,3*sc,9*sc);x.fillRect(px+2*sc,py-8*sc,3*sc,9*sc);
+    x.fillStyle="#e8c39e";x.beginPath();x.arc(px,py-35*sc,5*sc,0,7);x.fill()}
+  // sash
+  x.save();x.translate(W*.25,0);x.rotate(.48);x.fillStyle="rgba(255,255,255,.09)";x.fillRect(0,-60,60,H*2);x.fillStyle="rgba(232,181,32,.35)";x.fillRect(72,-60,10,H*2);x.restore()}
+renderGal();
+
+/* ---------- honours ---------- */
+const HON=[
+  ["Leinster Intermediate Club Football Championship",[2024],true],
+  ["Kildare Senior Football Championship",[1918,1919,1926],true],
+  ["Kildare Intermediate Football Championship",[1931,1995,2024]],
+  ["Kildare Junior Football Championship",[1917,1949,1993,2010,2020]],
+  ["Leinster Leader Cup",[1920]],
+  ["Jack Higgins Cup",[1993]],
+  ["Senior Football Div II League",[1995]],
+  ["Kildare Minor Football C Championship",[2008,2009]]
+];
+$("#roll").innerHTML=HON.map(([n,y])=>`<div><h4>${esc(n)}</h4><p>${y.join(" · ")}</p></div>`).join("");
+(function(){const items=[];HON.slice(0,5).forEach(([n,ys,big])=>ys.forEach(y=>items.push({y,n:n.replace("Kildare ","").replace(" Football Championship","").replace("Leinster Intermediate Club","Leinster IFC"),big})));
+  items.sort((a,b)=>a.y-b.y);const min=1910,max=2030,pos=y=>((y-min)/(max-min))*100;
+  let h=`<div class="axis"></div>`;for(let y=1910;y<=2030;y+=20)h+=`<div class="yr" style="left:${pos(y)}%">${y}</div>`;
+  let lastX=-99,flip=false;items.forEach(it=>{const p=pos(it.y);flip=(p-lastX<6)?!flip:false;lastX=p;
+    h+=`<div class="pin ${flip?"bot":"top"} ${it.big?"gold":""}" style="left:${p}%"><b>${it.y}</b><span>${esc(it.n)}</span><i></i></div>`});
+  $("#tl").innerHTML=h})();
+
+/* ---------- teams ---------- */
+const TEAMS=[["Nursery","Ages 4–7","nursery"],["Juvenile","U8 to U17","juvenile"],["Newtown Gaels","Girls’ football","newtown-gaels"],["All Stars","Inclusive football","all-stars"],["Senior Men","Leinster IFC champions","senior-men"],["Senior Ladies","Adult ladies","senior-ladies"],["Dads & Lads","Social football","dads-lads"],["Gaelic 4 Mothers & Others","Social football","gaelic-4-mothers-others"]];
+$("#teamsGrid").innerHTML=TEAMS.map(([n,s,u])=>`<a class="team" href="https://caraghgfc.com/teams/${u}"><b>${esc(n)}</b><span>${esc(s)}</span></a>`).join("");
+
+/* ---------- sponsors ---------- */
+const SP=["Powercomm","Naas Oil","Tim Cassidy Carpentry & Roofing","Joseph McMenamin & Sons","McNally Haulage","Christy Keenan Bar & Lounge","Stonewood Homes","Spar Prosperous","Cullen Kitchens","Oliver Reilly Funeral Directors","College Rise Developments","McCormacks Garage","Morans Crash Repairs","Clane Providers","Larry’s Bar & Off Licence","Little Scholars","Hammer & Tape","Nev-Mech Heating & Plumbing","Reilly’s Antiques","TJ O’Mahony","ReiMal Construction","Richie Whelans Menswear","Sherry Fitzgerald Reilly"];
+$("#track").innerHTML=[...SP,...SP].map(s=>`<span>${esc(s)}</span>`).join("");
+
+/* ---------- shop ---------- */
+const M="#74213d",W="#ffffff",G="#e8b520",N="#1d1d24";
+function shirt(body,sash,collar,zip){return `<svg viewBox="0 0 100 100" aria-hidden="true"><defs><clipPath id="c${body}${sash}${zip?1:0}"><path d="M30 12 L40 8 Q50 14 60 8 L70 12 L92 26 L84 42 L74 37 L74 92 L26 92 L26 37 L16 42 L8 26 Z"/></clipPath></defs>
+<path d="M30 12 L40 8 Q50 14 60 8 L70 12 L92 26 L84 42 L74 37 L74 92 L26 92 L26 37 L16 42 L8 26 Z" fill="${body}" stroke="rgba(0,0,0,.25)"/>
+<g clip-path="url(#c${body}${sash}${zip?1:0})"><path d="M20 98 L80 2 L96 2 L36 98 Z" fill="${sash}"/></g>
+<path d="M40 8 Q50 14 60 8 Q50 20 40 8" fill="${collar}"/>${zip?`<line x1="50" y1="14" x2="50" y2="${zip===2?92:40}" stroke="${collar}" stroke-width="2"/>`:""}</svg>`}
+function hoodie(body,trim){return `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M32 16 Q50 -2 68 16 L90 30 L84 52 L74 46 L74 92 L26 92 L26 46 L16 52 L10 30 Z" fill="${body}" stroke="rgba(0,0,0,.25)"/><path d="M38 18 Q50 6 62 18 Q50 30 38 18" fill="${trim}" opacity=".6"/><rect x="34" y="62" width="32" height="16" rx="3" fill="rgba(0,0,0,.15)"/><path d="M26 86 L74 86" stroke="${trim}" stroke-width="3"/><path d="M58 42 L72 30" stroke="${G}" stroke-width="5"/></svg>`}
+function pants(body,stripe){return `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M30 6 L70 6 L76 94 L56 94 L50 34 L44 94 L24 94 Z" fill="${body}" stroke="rgba(0,0,0,.25)"/><path d="M30 10 L25 92 M70 10 L75 92" stroke="${stripe}" stroke-width="3"/><rect x="30" y="6" width="40" height="6" fill="rgba(0,0,0,.2)"/></svg>`}
+function suit(){return `<svg viewBox="0 0 100 100" aria-hidden="true"><g transform="translate(-6,0) scale(.62)">${shirt(M,W,N,2).replace(/<\/?svg[^>]*>/g,"")}</g><g transform="translate(48,30) scale(.62)">${pants(N,M).replace(/<\/?svg[^>]*>/g,"")}</g></svg>`}
+function shorts(body,stripe){return `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M22 24 L78 24 L86 76 L56 80 L50 52 L44 80 L14 76 Z" fill="${body}" stroke="rgba(0,0,0,.25)"/><path d="M22 28 L15 74 M78 28 L85 74" stroke="${stripe}" stroke-width="3"/></svg>`}
+function socks(){return `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M26 8 L44 8 L44 66 Q44 74 52 76 L60 78 Q66 86 58 92 L28 92 Q22 92 24 84 L26 70 Z" fill="${M}" stroke="rgba(0,0,0,.25)"/><rect x="26" y="22" width="18" height="6" fill="${W}"/><rect x="26" y="32" width="18" height="3" fill="${G}"/><path d="M56 8 L74 8 L74 66 Q74 74 82 76 L88 78 Q94 86 86 92 L58 92" fill="${M}" opacity=".75"/></svg>`}
+function beanie(){return `<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="16" r="8" fill="${W}"/><path d="M18 70 Q18 22 50 22 Q82 22 82 70 Z" fill="${M}"/><rect x="16" y="64" width="68" height="18" rx="4" fill="${M}" stroke="rgba(0,0,0,.25)"/><rect x="16" y="70" width="68" height="5" fill="${G}"/></svg>`}
+const PRODUCTS=[
+  {id:"home",n:"Home Jersey 2026",c:"jerseys",p:65,img:"jerseys",art:()=>shirt(M,W,W),b:"New"},
+  {id:"home-k",n:"Home Jersey 2026 · Kids",c:"jerseys",p:50,art:()=>shirt(M,W,W),kids:1},
+  {id:"away",n:"Away Jersey",c:"jerseys",p:65,art:()=>shirt(W,M,M)},
+  {id:"gk",n:"Goalkeeper Jersey",c:"jerseys",p:65,art:()=>shirt(G,M,M)},
+  {id:"lein",n:"Leinster Champions 2024 Commemorative Jersey",c:"jerseys",p:70,art:()=>shirt(M,G,G),b:"Limited"},
+  {id:"hood",n:"Club Hoodie",c:"jumpers",p:50,art:()=>hoodie(M,W)},
+  {id:"qz",n:"Half-Zip Training Top",c:"jumpers",p:45,art:()=>shirt(N,M,W,1)},
+  {id:"crew",n:"Crew Neck Jumper",c:"jumpers",p:42,art:()=>hoodie(N,M)},
+  {id:"suit",n:"Full Tracksuit",c:"tracksuits",p:85,art:suit,b:"Popular"},
+  {id:"suit-k",n:"Full Tracksuit · Kids",c:"tracksuits",p:65,art:suit,kids:1},
+  {id:"bott",n:"Skinny Tracksuit Bottoms",c:"tracksuits",p:40,art:()=>pants(N,M)},
+  {id:"short",n:"Playing Shorts",c:"accessories",p:20,art:()=>shorts(W,M)},
+  {id:"socks",n:"Club Socks",c:"accessories",p:12,art:socks,sizes:["Junior","Adult"]},
+  {id:"hat",n:"Bobble Hat",c:"accessories",p:15,img:"hats",art:beanie,sizes:["One size"]},
+  {id:"gloves",n:"Club Grip Gloves",c:"accessories",p:25,img:"gloves",art:beanie,sizes:["Junior","S","M","L","XL"],b:"New"},
+  {id:"bottle",n:"Club Water Bottle",c:"accessories",p:8,img:"bottles",art:beanie,sizes:["750ml"]}
+];
+const pic=p=>p.img?`<img class="ph" src="img/${p.img}.jpg" alt="" loading="lazy">`:p.art();
+const SCATS={all:"Everything",jerseys:"Jerseys",jumpers:"Jumpers",tracksuits:"Tracksuits",accessories:"Accessories"};
+const ADULT=["S","M","L","XL","XXL"],KIDS=["5-6","7-8","9-10","11-12","13-14"];
+let shopCat="all";
+function renderShop(){$("#shopFilters").innerHTML=Object.entries(SCATS).map(([k,v])=>`<button aria-pressed="${k===shopCat}" data-c="${k}">${v}</button>`).join("");
+  $("#shopFilters").querySelectorAll("button").forEach(b=>b.onclick=()=>{shopCat=b.dataset.c;renderShop()});
+  $("#shopGrid").innerHTML=PRODUCTS.filter(p=>shopCat==="all"||p.c===shopCat).map(p=>{const sizes=p.sizes||(p.kids?KIDS:ADULT);
+    return `<div class="prod"><div class="pic${p.img?" has-photo":""}">${pic(p)}${p.b?`<span class="tag ${p.b==="Limited"?"minor":"senior"} badge">${p.b}</span>`:""}</div>
+    <div class="info"><span class="eyebrow">${SCATS[p.c]}</span><b>${esc(p.n)}</b><span class="price">€${p.p}</span>
+    <div class="row"><label class="sr" for="sz-${p.id}" hidden>Size</label><select id="sz-${p.id}" aria-label="Size for ${esc(p.n)}">${sizes.map(s=>`<option>${s}</option>`).join("")}</select>
+    <button class="btn add" data-id="${p.id}">Add</button></div></div></div>`}).join("");
+  $("#shopGrid").querySelectorAll(".add").forEach(b=>b.onclick=()=>addToCart(b.dataset.id,$("#sz-"+b.dataset.id).value))}
+let cart=[];try{cart=JSON.parse(localStorage.getItem("caraghCart")||"[]")}catch(e){cart=[]}
+function saveCart(){try{localStorage.setItem("caraghCart",JSON.stringify(cart))}catch(e){}}
+function addToCart(id,size){const ex=cart.find(c=>c.id===id&&c.size===size);ex?ex.q++:cart.push({id,size,q:1});saveCart();renderCart();
+  const p=PRODUCTS.find(p=>p.id===id);toast(`Added ${p.n} (${size})`)}
+function renderCart(){const n=cart.reduce((a,c)=>a+c.q,0);$("#cartCount").textContent=n;
+  const total=cart.reduce((a,c)=>a+c.q*PRODUCTS.find(p=>p.id===c.id).p,0);$("#cartTotal").textContent="€"+total;
+  $("#cartItems").innerHTML=cart.length?cart.map((c,i)=>{const p=PRODUCTS.find(p=>p.id===c.id);
+    return `<div class="ci"><div class="mini">${pic(p)}</div><div style="min-width:0"><b style="font-size:.95rem">${esc(p.n)}</b><div class="note">Size ${esc(c.size)} · €${p.p}</div></div>
+    <div class="qty"><button data-i="${i}" data-d="-1" aria-label="Remove one">−</button><span>${c.q}</span><button data-i="${i}" data-d="1" aria-label="Add one">+</button></div></div>`}).join("")
+    :`<p class="note">Your basket is empty. Add a jersey, jumper or tracksuit from the shop.</p>`;
+  $("#cartItems").querySelectorAll(".qty button").forEach(b=>b.onclick=()=>{const c=cart[+b.dataset.i];c.q+=+b.dataset.d;if(c.q<=0)cart.splice(+b.dataset.i,1);saveCart();renderCart()});
+  $("#checkoutArea").innerHTML=cart.length?`<button class="btn gold" id="checkout" style="justify-content:center">Checkout · collect at the clubhouse</button>`:"";
+  const co=$("#checkout");if(co)co.onclick=()=>{$("#checkoutArea").innerHTML=`<div class="confirm"><b>Online payment is not connected yet.</b> When the site goes live, this step will take payment through the club’s card provider and email a collection slip.</div>`}}
+function openCart(o){$("#drawer").hidden=!o;$("#drawerBg").hidden=!o}
+$("#cartBtn").onclick=()=>openCart(true);$("#cartBtn2").onclick=()=>openCart(true);
+$("#closeDrawer").onclick=()=>openCart(false);$("#drawerBg").onclick=()=>openCart(false);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")openCart(false)});
+renderShop();renderCart();
+
+/* copy */
+document.querySelectorAll("[data-copy]").forEach(b=>b.onclick=()=>{const t=b.dataset.copy;
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("Email address copied")).catch(()=>{const r=document.createRange();r.selectNodeContents(b.parentNode);const s=getSelection();s.removeAllRanges();s.addRange(r);toast("Press Ctrl+C to copy")})});
+/* ---- v2: home lists, router, back to top ---- */
+(function(){
+  const up=FIX.filter(f=>new Date(f.d)>=TODAY).sort((a,b)=>new Date(a.d)-new Date(b.d)).slice(0,4);
+  $("#homeFix").innerHTML=up.map(f=>fixRow(f)).join("");
+  $("#homeNews").innerHTML=NEWS.slice(0,3).map(n=>`<a href="${n.u}"><span class="eyebrow">${n.d}</span><b>${esc(n.t)}</b></a>`).join("");
+})();
+function setTab(t){document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x.dataset.tab===t));["fix","res","news"].forEach(k=>$("#tab-"+k).hidden=k!==t)}
+const PAGES=[...document.querySelectorAll(".page")].map(p=>p.dataset.page);
+const NAV_PARENT={"club-hub":"club",community:"club"};
+function route(){let h=location.hash.slice(1)||"home";let tab=null;
+  if(h==="news"){h="fixtures";tab="news"}
+  if(!PAGES.includes(h))h="home";
+  document.querySelectorAll(".page").forEach(p=>p.hidden=p.dataset.page!==h);
+  const navKey=NAV_PARENT[h]||h;
+  document.querySelectorAll("#nav a").forEach(a=>{const on=a.dataset.nav===navKey;a.classList.toggle("active",on);on?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current")});
+  if(h==="fixtures")setTab(tab||"fix");
+  
+  window.scrollTo(0,0);updateTop();}
+window.addEventListener("hashchange",route);
+const topBtn=$("#toTop");
+function updateTop(){topBtn.hidden=window.scrollY<300}
+window.addEventListener("scroll",updateTop,{passive:true});
+topBtn.onclick=()=>window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+route();
+
+/* theme toggle */
+(function(){const root=document.documentElement,btn=$("#themeBtn"),mq=matchMedia("(prefers-color-scheme: dark)");
+  let saved=null;try{saved=localStorage.getItem("caraghTheme")}catch(e){}
+  function apply(t){if(t)root.setAttribute("data-theme",t);const dark=t?t==="dark":(root.getAttribute("data-theme")||(mq.matches?"dark":"light"))==="dark";
+    root.classList.toggle("is-dark",dark);btn.querySelector(".tlabel").textContent=dark?"Light":"Dark";btn.setAttribute("aria-label",dark?"Switch to light mode":"Switch to dark mode")}
+  apply(saved);
+  btn.onclick=()=>{const t=root.classList.contains("is-dark")?"light":"dark";try{localStorage.setItem("caraghTheme",t)}catch(e){}apply(t)};
+  mq.addEventListener&&mq.addEventListener("change",()=>apply(null));
+})();
+
+/* ===== Kick a Point game ===== */
+(function(){
+  const cv=$("#gameCanvas"),ctx=cv.getContext("2d"),btn=$("#gBtn"),msg=$("#gMsg");
+  const G=9.8,BAR=2.5,HALF=3.25,POST=8,CAM={y:1.7,z:-7};
+  let W=0,H=0,state="idle",aim=0,power=0,t0=0,kick=0,goals=0,points=0,dist=21,wind=0,ball=null,result="",resultT=0,keeper=0,keeperDir=1,best=null;
+  try{best=JSON.parse(localStorage.getItem("caraghKickBest")||"null")}catch(e){}
+  const total=()=>goals*3+points, fmt=(g,p)=>`${g}-${String(p).padStart(2,"0")}`;
+  function size(){const r=cv.getBoundingClientRect();if(!r.width)return;const d=Math.min(2,devicePixelRatio||1);cv.width=r.width*d;cv.height=r.width*10/16*d;W=cv.width;H=cv.height;ctx.setTransform(1,0,0,1,0,0)}
+  function proj(x,y,z){const f=W*0.9,dz=z-CAM.z;return [W/2+f*x/dz, H*0.42-f*(y-CAM.y)/dz, f/dz]}
+  function hud(){$("#gScore").textContent=fmt(goals,points);$("#gKick").textContent=`${Math.min(kick+1,10)}/10`;$("#gDist").textContent=`${dist}m`;
+    $("#gWind").textContent=wind===0?"Calm":`${Math.abs(wind).toFixed(1)} ${wind>0?"→":"←"}`;$("#gBest").textContent=best?fmt(best.g,best.p):"–"}
+  function newKick(){dist=Math.min(45,21+Math.floor(kick/2)*4+(Math.random()*3|0));wind=Math.round((Math.random()*4-2)*10)/10;if(Math.abs(wind)<.3)wind=0;state="aim";t0=performance.now();btn.textContent="Lock aim";msg.textContent="";hud()}
+  function start(){kick=0;goals=0;points=0;newKick()}
+  function press(){
+    if(state==="idle"||state==="over"){start();return}
+    if(state==="aim"){state="power";t0=performance.now();btn.textContent="Kick!";return}
+    if(state==="power"){const v=11+17*power,th=aim*0.2,el=0.52;
+      ball={x:0,y:0.2,z:0,vx:v*Math.cos(el)*Math.sin(th),vy:v*Math.sin(el),vz:v*Math.cos(el)*Math.cos(th),done:false};state="flight";btn.textContent="…";return}
+    if(state==="result"){kick++;if(kick>=10)finish();else newKick()}
+  }
+  function finish(){state="over";const sc=total();if(!best||sc>best.g*3+best.p){best={g:goals,p:points};try{localStorage.setItem("caraghKickBest",JSON.stringify(best))}catch(e){}}
+    msg.textContent=`Final ${fmt(goals,points)}`;btn.textContent="Play again";hud()}
+  function judge(){const {x,y}=ball;let r;
+    if(Math.abs(x)<HALF&&y>BAR&&y<14)r="POINT!";
+    else if(Math.abs(x)<HALF&&y<=BAR&&y>0){r=Math.abs(x-keeper)<1.1?"SAVED!":"GOAL!!"}
+    else r=Math.abs(x)<HALF?"Short":"Wide";
+    if(r==="POINT!")points++;if(r==="GOAL!!")goals++;
+    result=r;msg.textContent=r;state="result";resultT=performance.now();btn.textContent=kick>=9?"See score":"Next kick";hud()}
+  function step(dt){if(!ball||state!=="flight")return;
+    ball.vx+=wind*0.35*dt;ball.vy-=G*dt;ball.x+=ball.vx*dt;ball.y+=ball.vy*dt;ball.z+=ball.vz*dt;
+    if(!ball.done&&ball.z>=dist){ball.done=true;judge()}
+    if(!ball.done&&ball.y<=0){ball.y=0;ball.done=true;result="Short";msg.textContent="Short";state="result";resultT=performance.now();btn.textContent=kick>=9?"See score":"Next kick";hud()}}
+  function draw(now){if(!W)return;
+    // sky
+    const sky=ctx.createLinearGradient(0,0,0,H*.45);sky.addColorStop(0,"#4f8fcf");sky.addColorStop(1,"#bcd9ef");ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+    // stand
+    const hz=proj(0,0,400)[1];ctx.fillStyle="#74213d";ctx.fillRect(0,hz-H*.09,W,H*.09);ctx.fillStyle="rgba(255,255,255,.15)";
+    for(let i=0;i<W;i+=W/40)ctx.fillRect(i,hz-H*.09,W/80,H*.09);
+    // grass stripes
+    for(let z=0;z<120;z+=5){const a=proj(0,0,z)[1],b=proj(0,0,z+5)[1];ctx.fillStyle=(z/5)%2?"#3f8a3a":"#469a40";ctx.fillRect(0,b,W,a-b+1)}
+    ctx.fillStyle="#3f8a3a";ctx.fillRect(0,proj(0,0,0)[1],W,H);
+    // lines: endline and 13m/20m/45m
+    ctx.strokeStyle="rgba(255,255,255,.75)";ctx.lineWidth=Math.max(1,W/500);
+    [[dist,1],[dist-13,.5],[dist-20,.5],[dist-45,.5]].forEach(([z,a])=>{if(z<=0.5)return;const L=proj(-40,0,z),R=proj(40,0,z);ctx.globalAlpha=a;ctx.beginPath();ctx.moveTo(L[0],L[1]);ctx.lineTo(R[0],R[1]);ctx.stroke()});ctx.globalAlpha=1;
+    // small rectangle
+    ctx.beginPath();[[-HALF-1.5,dist],[-HALF-1.5,dist-4.5],[HALF+1.5,dist-4.5],[HALF+1.5,dist]].forEach((p,i)=>{const q=proj(p[0],0,p[1]);i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1])});ctx.stroke();
+    // net
+    const nb=[proj(-HALF,0,dist),proj(HALF,0,dist),proj(HALF,BAR,dist),proj(-HALF,BAR,dist)];
+    ctx.fillStyle="rgba(255,255,255,.18)";ctx.beginPath();nb.forEach((q,i)=>i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]));ctx.fill();
+    ctx.strokeStyle="rgba(255,255,255,.35)";ctx.lineWidth=1;for(let i=1;i<10;i++){const x=-HALF+i*HALF*2/10,a=proj(x,0,dist),b=proj(x,BAR,dist);ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke()}
+    // keeper
+    if(state!=="idle"){keeper+=keeperDir*0.035;if(Math.abs(keeper)>2.2)keeperDir*=-1;const kp=proj(keeper,0,dist-.6),s=kp[2];
+      ctx.fillStyle="#e8b520";ctx.fillRect(kp[0]-.35*s,kp[1]-1.5*s,.7*s,.75*s);ctx.fillStyle="#1d1d24";ctx.fillRect(kp[0]-.3*s,kp[1]-.75*s,.6*s,.75*s);
+      ctx.fillStyle="#e8c39e";ctx.beginPath();ctx.arc(kp[0],kp[1]-1.7*s,.2*s,0,7);ctx.fill()}
+    // posts
+    const pw=Math.max(2,proj(0,0,dist)[2]*0.12);ctx.lineCap="round";
+    [[-HALF],[HALF]].forEach(([x])=>{const a=proj(x,0,dist),b=proj(x,POST,dist);ctx.strokeStyle="#fff";ctx.lineWidth=pw;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();
+      ctx.strokeStyle="#74213d";ctx.lineWidth=pw*1.4;const p=proj(x,1.2,dist);ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(p[0],p[1]);ctx.stroke()});
+    const c1=proj(-HALF,BAR,dist),c2=proj(HALF,BAR,dist);ctx.strokeStyle="#fff";ctx.lineWidth=pw;ctx.beginPath();ctx.moveTo(c1[0],c1[1]);ctx.lineTo(c2[0],c2[1]);ctx.stroke();
+    // flag
+    const fl=proj(-HALF-3,0,dist),ft=proj(-HALF-3,2.5,dist),fs=fl[2];ctx.strokeStyle="#ddd";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(fl[0],fl[1]);ctx.lineTo(ft[0],ft[1]);ctx.stroke();
+    ctx.fillStyle="#e8b520";ctx.beginPath();ctx.moveTo(ft[0],ft[1]);ctx.lineTo(ft[0]+(wind>=0?1:-1)*(.4+Math.abs(wind)*.35)*fs,ft[1]+.2*fs+Math.sin(now/150)*2);ctx.lineTo(ft[0],ft[1]+.45*fs);ctx.fill();
+    // aim line
+    if(state==="aim"||state==="power"){if(state==="aim")aim=Math.sin((now-t0)/520);
+      const th=aim*0.2;ctx.setLineDash([W/80,W/80]);ctx.strokeStyle="rgba(255,255,255,.9)";ctx.lineWidth=W/300;ctx.beginPath();const a=proj(0,0,0.5),b=proj(Math.tan(th)*dist,0,dist);ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();ctx.setLineDash([])}
+    // power meter
+    if(state==="power"){power=(1-Math.cos((now-t0)/380))/2;}
+    if(state==="power"||state==="flight"){const mx=W*.06,my=H*.25,mh=H*.55,mw=W*.025;ctx.fillStyle="rgba(0,0,0,.35)";ctx.fillRect(mx,my,mw,mh);
+      const g=ctx.createLinearGradient(0,my+mh,0,my);g.addColorStop(0,"#5fd39a");g.addColorStop(.6,"#e8b520");g.addColorStop(1,"#d9433b");ctx.fillStyle=g;ctx.fillRect(mx,my+mh*(1-power),mw,mh*power);
+      ctx.fillStyle="#fff";ctx.font=`700 ${W/60}px Manrope,sans-serif`;ctx.fillText("POWER",mx-W*.01,my-H*.02)}
+    // ball + shadow
+    const b=ball||{x:0,y:0.2,z:0};if(state!=="idle"&&state!=="over"&&!(state==="aim"&&!ball)||ball){}
+    const bb=(state==="aim"||state==="power")?{x:0,y:0.2,z:0}:b;
+    const sh=proj(bb.x,0,bb.z),bp=proj(bb.x,bb.y,bb.z),r=Math.max(3,.22*bp[2]);
+    ctx.fillStyle="rgba(0,0,0,.25)";ctx.beginPath();ctx.ellipse(sh[0],sh[1],r,r*.35,0,0,7);ctx.fill();
+    ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(bp[0],bp[1]-r*.2,r,0,7);ctx.fill();ctx.strokeStyle="#74213d";ctx.lineWidth=Math.max(1,r*.15);ctx.beginPath();ctx.arc(bp[0],bp[1]-r*.2,r*.6,0,Math.PI);ctx.stroke();
+    if(state==="idle"){ctx.fillStyle="rgba(42,10,23,.55)";ctx.fillRect(0,0,W,H);ctx.fillStyle="#fff";ctx.textAlign="center";ctx.font=`900 ${W/14}px "Big Shoulders Display",Impact,sans-serif`;ctx.fillText("KICK A POINT",W/2,H*.48);
+      ctx.font=`600 ${W/40}px Manrope,sans-serif`;ctx.fillText("Press Start, tap the pitch or hit Space",W/2,H*.58);ctx.textAlign="start"}
+  }
+  let last=performance.now();
+  function loop(now){const dt=Math.min(.033,(now-last)/1000);last=now;
+    const active=!document.querySelector('[data-page="game"]').hidden;
+    if(active){if(!W)size();step(dt);draw(now)}requestAnimationFrame(loop)}
+  btn.onclick=press;cv.addEventListener("pointerdown",e=>{e.preventDefault();press()});
+  document.addEventListener("keydown",e=>{if(document.querySelector('[data-page="game"]').hidden)return;if(e.code==="Space"||e.key==="Enter"){if(e.target===btn)return;e.preventDefault();press()}});
+  window.addEventListener("resize",()=>{W=0});window.addEventListener("hashchange",()=>{W=0});
+  hud();requestAnimationFrame(loop);
+})();
+</script>
+
+</body>
+</html>
