@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Caragh Gaelic Football Club, Saint Farnan’s Park, Prosperous, Co. Kildare. Fixtures, results, club shop, honours and more.">
 <link rel="icon" href="img/crest.jpg">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
-@media (max-width:420px){.brand small{font-size:.62rem}}
-</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Caragh GFC</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -530,6 +528,106 @@ footer{margin:0 max(12px,env(safe-area-inset-left,0px)) 12px;border-radius:24px}
 .side-col{display:grid;gap:16px;align-content:start}
 .side-photo{width:100%;aspect-ratio:4/3;max-width:100%;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
 @media (prefers-reduced-motion:reduce){.tile.photo img,.album img{transition:none}}
+
+@media (max-width:420px){.brand small{font-size:.62rem}}
+
+/* ===== v8: mobile fixes ===== */
+.tl-list{display:none}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:28px}
+  .hero .wrap > *{min-width:0}
+  .next-card{width:100%}
+}
+@media (max-width:640px){
+  /* header: crest, name, theme + basket on one row */
+  header.site .wrap{gap:10px}
+  .brand{min-width:0;flex:1 1 auto;margin-right:0}
+  .brand > span{min-width:0}
+  .brand b{font-size:1.3rem;white-space:nowrap}
+  .brand small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand img{width:40px;height:40px}
+  .theme-btn{margin-left:0;padding:9px 11px}
+  .tlabel{display:none}
+  .cart-btn{padding:8px 11px}
+  /* hero */
+  .hero .wrap{padding-block:36px 28px}
+  .hero h1{font-size:clamp(3.6rem,19vw,5rem)}
+  .lede{margin:.8rem 0 1.2rem}
+  .hero-ctas{gap:10px}
+  .hero-ctas .btn{flex:1 1 0;justify-content:center;padding:12px 14px;min-width:0}
+  .hero-stats{margin-top:28px;gap:14px 20px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .next-card{padding:18px;border-radius:18px}
+  .next-card .teams{grid-template-columns:1fr auto 1fr;gap:6px;margin:12px 0}
+  .next-card .teams b{font-size:clamp(1.3rem,7vw,1.8rem);overflow-wrap:anywhere}
+  .next-card .note{font-size:.82rem}
+  .countdown{gap:6px}
+  .countdown div{padding:8px 0}
+  .countdown b{font-size:1.8rem}
+  .countdown span{font-size:.62rem}
+  /* home tiles: two per row */
+  .tiles{grid-template-columns:1fr 1fr;gap:10px}
+  .tile-text{padding:12px 12px 14px}
+  .tile b{font-size:1.15rem!important;line-height:1.05}
+  .tile-text span,.tile.photo i{display:none}
+  .tile.photo img{aspect-ratio:4/3}
+  .block{padding-block:32px 0}
+  /* page banners */
+  .page-head{border-radius:18px}
+  .page-head .wrap{padding-block:56px 28px}
+  .page-head h1{font-size:clamp(2rem,9.5vw,2.8rem)}
+  .page-body{padding-block:24px 56px}
+  /* fixtures */
+  .tabs{display:flex;width:100%}
+  .tabs button{flex:1;padding:8px 6px;font-size:1rem}
+  .fix{grid-template-columns:62px 1fr;gap:12px;padding:12px 14px}
+  .fix .date{padding-right:10px}
+  .fix .date b{font-size:1.8rem}
+  .fix h4{font-size:1rem}
+  .fix .time{grid-column:2;margin-top:-6px;font-size:.85rem;color:var(--muted)}
+  /* calendar */
+  .cal-box{padding:14px}
+  .cal-top h3{font-size:1.4rem}
+  .day{padding:4px;font-size:.82rem}
+  .dots i{width:5px;height:5px}
+  /* honours: vertical timeline instead of the wide one */
+  .timeline{display:none}
+  .tl-list{display:grid;gap:0;border-left:3px solid var(--line);margin-left:6px;padding-left:18px}
+  .tl-list div{position:relative;padding:8px 0}
+  .tl-list div::before{content:"";position:absolute;left:-26px;top:13px;width:13px;height:13px;border-radius:50%;background:var(--maroon);box-shadow:0 0 0 3px var(--bg)}
+  .tl-list div.gold::before{background:var(--gold)}
+  .tl-list b{font:900 1.4rem var(--display);margin-right:10px;font-variant-numeric:tabular-nums}
+  .trophy{padding:14px}
+  .trophy b{font-size:2.6rem}
+  .trophy span{font-size:.88rem}
+  .feature-win{padding:18px}
+  .feature-win b{font-size:2.6rem}
+  /* shop: two per row */
+  .shop-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .prod .info{padding:10px;gap:6px}
+  .prod .info b{font-size:.9rem}
+  .prod .price{font-size:1.3rem}
+  .prod .row{flex-direction:column;gap:6px}
+  .prod select{width:100%;padding:7px}
+  .prod .add{justify-content:center;padding:8px 12px}
+  .shop-bar .btn{width:100%;justify-content:center}
+  /* cards */
+  .support .card{padding:18px}
+  .support h3{font-size:1.7rem}
+  .game-controls{flex-direction:column;align-items:stretch}
+  .game-controls .btn{justify-content:center}
+  .game-stage canvas{aspect-ratio:4/3}
+  footer .cols{gap:20px}
+  .to-top{width:46px;height:46px;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px))}
+}
+.countdown{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cal-grid{grid-template-columns:repeat(7,minmax(0,1fr))}
+.support > *, .cal > *, .two > *, .home-split > *{min-width:0}
+@media (max-width:720px){.support{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.cal{grid-template-columns:minmax(0,1fr)}}
+
+@media (max-width:640px){.hero-ctas .btn{white-space:nowrap;font-size:.9rem}.mono{word-break:normal;overflow-wrap:anywhere}}
+@media (max-width:380px){.brand b{font-size:1.1rem}.brand small{display:none}.brand img{width:36px;height:36px}header.site .wrap{gap:8px}.cal-top h3{font-size:1.2rem}.hero-ctas .btn{padding:12px 10px;font-size:.85rem}}
+@media (max-width:640px){.brand{flex:1 1 0}.brand > span{overflow:hidden}}
 </style>
 </head>
 <body>
@@ -713,6 +811,7 @@ footer{margin:0 max(12px,env(safe-area-inset-left,0px)) 12px;border-radius:24px}
     </div>
     <h3 class="sub">Timeline</h3>
     <div class="timeline"><div class="tl" id="tl"></div></div>
+    <div class="tl-list" id="tlList"></div>
     <h3 class="sub">Full roll of honour</h3>
     <div class="roll" id="roll"></div>
   </div>
@@ -959,12 +1058,13 @@ const HON=[
   ["Kildare Minor Football C Championship",[2008,2009]]
 ];
 $("#roll").innerHTML=HON.map(([n,y])=>`<div><h4>${esc(n)}</h4><p>${y.join(" · ")}</p></div>`).join("");
-(function(){const items=[];HON.slice(0,5).forEach(([n,ys,big])=>ys.forEach(y=>items.push({y,n:n.replace("Kildare ","").replace(" Football Championship","").replace("Leinster Intermediate Club","Leinster IFC"),big})));
+(function(){const items=[];HON.slice(0,5).forEach(([n,ys,big])=>ys.forEach(y=>items.push({y,full:n,n:n.replace("Kildare ","").replace(" Football Championship","").replace("Leinster Intermediate Club","Leinster IFC"),big})));
   items.sort((a,b)=>a.y-b.y);const min=1910,max=2030,pos=y=>((y-min)/(max-min))*100;
   let h=`<div class="axis"></div>`;for(let y=1910;y<=2030;y+=20)h+=`<div class="yr" style="left:${pos(y)}%">${y}</div>`;
   let lastX=-99,flip=false;items.forEach(it=>{const p=pos(it.y);flip=(p-lastX<6)?!flip:false;lastX=p;
     h+=`<div class="pin ${flip?"bot":"top"} ${it.big?"gold":""}" style="left:${p}%"><b>${it.y}</b><span>${esc(it.n)}</span><i></i></div>`});
-  $("#tl").innerHTML=h})();
+  $("#tl").innerHTML=h;
+  $("#tlList").innerHTML=items.map(it=>`<div class="${it.big?"gold":""}"><b>${it.y}</b>${esc(it.full)}</div>`).join("")})();
 
 /* ---------- teams ---------- */
 const TEAMS=[["Nursery","Ages 4–7","nursery"],["Juvenile","U8 to U17","juvenile"],["Newtown Gaels","Girls’ football","newtown-gaels"],["All Stars","Inclusive football","all-stars"],["Senior Men","Leinster IFC champions","senior-men"],["Senior Ladies","Adult ladies","senior-ladies"],["Dads & Lads","Social football","dads-lads"],["Gaelic 4 Mothers & Others","Social football","gaelic-4-mothers-others"]];
@@ -1080,7 +1180,7 @@ route();
   let W=0,H=0,state="idle",aim=0,power=0,t0=0,kick=0,goals=0,points=0,dist=21,wind=0,ball=null,result="",resultT=0,keeper=0,keeperDir=1,best=null;
   try{best=JSON.parse(localStorage.getItem("caraghKickBest")||"null")}catch(e){}
   const total=()=>goals*3+points, fmt=(g,p)=>`${g}-${String(p).padStart(2,"0")}`;
-  function size(){const r=cv.getBoundingClientRect();if(!r.width)return;const d=Math.min(2,devicePixelRatio||1);cv.width=r.width*d;cv.height=r.width*10/16*d;W=cv.width;H=cv.height;ctx.setTransform(1,0,0,1,0,0)}
+  function size(){const r=cv.getBoundingClientRect();if(!r.width)return;const d=Math.min(2,devicePixelRatio||1);cv.width=r.width*d;cv.height=r.height*d;W=cv.width;H=cv.height;ctx.setTransform(1,0,0,1,0,0)}
   function proj(x,y,z){const f=W*0.9,dz=z-CAM.z;return [W/2+f*x/dz, H*0.42-f*(y-CAM.y)/dz, f/dz]}
   function hud(){$("#gScore").textContent=fmt(goals,points);$("#gKick").textContent=`${Math.min(kick+1,10)}/10`;$("#gDist").textContent=`${dist}m`;
     $("#gWind").textContent=wind===0?"Calm":`${Math.abs(wind).toFixed(1)} ${wind>0?"→":"←"}`;$("#gBest").textContent=best?fmt(best.g,best.p):"–"}
@@ -1142,15 +1242,15 @@ route();
     if(state==="power"){power=(1-Math.cos((now-t0)/380))/2;}
     if(state==="power"||state==="flight"){const mx=W*.06,my=H*.25,mh=H*.55,mw=W*.025;ctx.fillStyle="rgba(0,0,0,.35)";ctx.fillRect(mx,my,mw,mh);
       const g=ctx.createLinearGradient(0,my+mh,0,my);g.addColorStop(0,"#5fd39a");g.addColorStop(.6,"#e8b520");g.addColorStop(1,"#d9433b");ctx.fillStyle=g;ctx.fillRect(mx,my+mh*(1-power),mw,mh*power);
-      ctx.fillStyle="#fff";ctx.font=`700 ${W/60}px Manrope,sans-serif`;ctx.fillText("POWER",mx-W*.01,my-H*.02)}
+      ctx.fillStyle="#fff";ctx.font=`700 ${Math.max(11,W/60)}px Manrope,sans-serif`;ctx.fillText("POWER",mx-W*.01,my-H*.02)}
     // ball + shadow
     const b=ball||{x:0,y:0.2,z:0};if(state!=="idle"&&state!=="over"&&!(state==="aim"&&!ball)||ball){}
     const bb=(state==="aim"||state==="power")?{x:0,y:0.2,z:0}:b;
     const sh=proj(bb.x,0,bb.z),bp=proj(bb.x,bb.y,bb.z),r=Math.max(3,.22*bp[2]);
     ctx.fillStyle="rgba(0,0,0,.25)";ctx.beginPath();ctx.ellipse(sh[0],sh[1],r,r*.35,0,0,7);ctx.fill();
     ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(bp[0],bp[1]-r*.2,r,0,7);ctx.fill();ctx.strokeStyle="#74213d";ctx.lineWidth=Math.max(1,r*.15);ctx.beginPath();ctx.arc(bp[0],bp[1]-r*.2,r*.6,0,Math.PI);ctx.stroke();
-    if(state==="idle"){ctx.fillStyle="rgba(42,10,23,.55)";ctx.fillRect(0,0,W,H);ctx.fillStyle="#fff";ctx.textAlign="center";ctx.font=`900 ${W/14}px "Big Shoulders Display",Impact,sans-serif`;ctx.fillText("KICK A POINT",W/2,H*.48);
-      ctx.font=`600 ${W/40}px Manrope,sans-serif`;ctx.fillText("Press Start, tap the pitch or hit Space",W/2,H*.58);ctx.textAlign="start"}
+    if(state==="idle"){ctx.fillStyle="rgba(42,10,23,.55)";ctx.fillRect(0,0,W,H);ctx.fillStyle="#fff";ctx.textAlign="center";ctx.font=`900 ${Math.max(28,W/14)}px "Big Shoulders Display",Impact,sans-serif`;ctx.fillText("KICK A POINT",W/2,H*.48);
+      ctx.font=`600 ${Math.max(13,W/40)}px Manrope,sans-serif`;ctx.fillText("Press Start, tap the pitch or hit Space",W/2,H*.58);ctx.textAlign="start"}
   }
   let last=performance.now();
   function loop(now){const dt=Math.min(.033,(now-last)/1000);last=now;
